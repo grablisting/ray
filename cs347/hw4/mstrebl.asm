@@ -35,8 +35,8 @@ asm_main:
 
 start_mstrebl:
 	mov	ECX, MAX_LENGTH		;Initialize maximum string length counter
-	mov	EBX, input
-	mov	EAX, 0		
+	mov	EBX, input		;Load location of input string
+	mov	EAX, 0			;Clean register
 
 input_loop:
 	call	read_char
