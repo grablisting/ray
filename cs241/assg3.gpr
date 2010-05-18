@@ -1,0 +1,6 @@
+project Assg3 is
+
+   for Object_Dir use "..\..\";
+
+end Assg3;
+
