@@ -18,19 +18,13 @@
 %include "asm_io.inc"
 
 segment .data
-NEWLINE_FLAG		equ	0Ah
+NF			equ	0Ah
 MAX_LENGTH		equ	80
 
-characters_left_msg	db	", characters left ",0
-input_loop_msg		db	"Entering input_loop",0
-clean_input_msg		db	"Entering clean_input",0
-skip_blanks_msg		db	"Entering skip_blanks",0
-read_printable_msg	db	"Entering read_printable on ",0
-fin_msg			db	"Entering fin",0
-
 segment .bss
-input			resd 1
-output			resd 1
+input			resd 4 * MAX_LENGTH
+output			resd 4 * MAX_LENGTH
+total			resw 1
 
 segment .text
         global  asm_main
@@ -48,63 +42,59 @@ input_loop:
 	call	read_char
 	mov	[EBX], AL
 	inc	EBX
-	cmp	AL, NEWLINE_FLAG
-	je	clean_input
+	cmp	AL, NF
+	je	init_clean
 	loop	input_loop
 
-clean_input:
-	mov	EAX, 0
-	mov	ECX, EBX
-	mov	EBX, input
-	mov	EDX, output
-	call	print_nl
-	call	print_nl
-	jmp	skip_blanks
+init_clean:
+	mov	EAX, MAX_LENGTH
+	xchg	ECX, EAX
+	sub	ECX, EAX
+	mov	[total], ECX
+
+	mov	EBX,input
+	mov	EDX,output
 
 skip_blanks:
-	call	get_next		;Get the next character
-	cmp	AL, 33			;If > 32, it is printable
-	jge	print_printable		;If true, print it!
-	jmp	skip_blanks		;Otherwise, throw it out and continue
-	
-print_space:
-	call	print_input		;Display current character
-	call	get_next		;Get the next one
-	cmp	AL, 33			;If < 33, it is not printable
-	jl	skip_blanks		;If true, skip blanks
-	jmp	print_printable
-
-print_printable:
-	call	print_input		;Display current character
-	call	get_next		;Get the next one
+	call	get_next_char
 	cmp	AL, 33
-	jl	print_space
-	jmp	print_printable		;Otherwise, continue reading_printable
+	jl	skip_blanks
+	jmp	clean_input
 
-get_next:
-	cmp	EBX, ECX
-	je	fin
-	mov	AL, [EBX]		;Load a character
-	inc 	EBX			;Point at the next character
+clean_input:
+	call	save_this_char
+	call	get_next_char
+	cmp	AL, 33
+	jl	save_a_space
+	loop	clean_input
+
+	mov	EDX, output
+	jmp	fin
+
+save_a_space:
+	call	save_this_char
+	call	get_next_char
+	cmp	AL, 33
+	jge	clean_input
+	jmp	skip_blanks
+
+get_next_char:
+	mov	AL, [EBX]
+	inc	EBX
 	ret
 
-print_input:
-	call	print_char
+save_this_char:
 	mov	[EDX], AL
 	inc	EDX
-	cmp	AL, 0
-	je	fin
 	ret
 
-print_output:
-	cmp	AL, NEWLINE_FLAG
-	je	fin
+fin:
 	mov	AL, [EDX]
 	inc	EDX
 	call	print_char
-	jmp	print_output
+	cmp	AL, NF
+	jne	goagain
 
-fin:
         popa
         mov     EAX, 0
         leave
