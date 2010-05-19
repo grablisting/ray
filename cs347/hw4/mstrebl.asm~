@@ -22,20 +22,18 @@ NF			equ	0Ah
 MAX_LENGTH		equ	80
 
 segment .bss
-input			resd 4 * MAX_LENGTH
-output			resd 4 * MAX_LENGTH
+input			resw MAX_LENGTH
+output			resw MAX_LENGTH
 total			resw 1
 
 segment .text
         global  asm_main
+	extern	
 
 asm_main:
         enter   0,0
         pusha
 
-;
-;
-;
 start_mstrebl:
 	mov	ECX, MAX_LENGTH		;Initialize maximum string length counter
 	mov	EBX, input		;Load location of input string

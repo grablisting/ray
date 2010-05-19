@@ -22,12 +22,13 @@ NF			equ	0Ah
 MAX_LENGTH		equ	80
 
 segment .bss
-input			resd 4 * MAX_LENGTH
-output			resd 4 * MAX_LENGTH
+input			resw MAX_LENGTH
+output			resw MAX_LENGTH
 total			resw 1
 
 segment .text
         global  asm_main
+	extern	strebl
 
 asm_main:
         enter   0,0
