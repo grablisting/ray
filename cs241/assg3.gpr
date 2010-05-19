@@ -1,6 +1,7 @@
 project Assg3 is
 
-   for Object_Dir use "..\..\";
+   for Main use ("assg3.adb");
+   for Source_Files use ("assg3.adb", "BeautifulIO.adb", "BeautifulIO.ads", "CommonHelpers.adb", "CommonHelpers.ads", "lists_generic.adb", "lists_generic.ads");
 
 end Assg3;
 
