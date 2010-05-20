@@ -18,13 +18,13 @@
 %include "asm_io.inc"
 
 segment .data
-NF					equ	0Ah
-MAX_LENGTH				equ	80
-input		times MAX_LENGTH	dw	0
-output		times MAX_LENGTH	dw	0
+NF		equ	0Ah
+MAX_LENGTH	equ	80
 
 segment .bss
 total		resd 	1
+input		resw	80
+output		resw	80
 
 segment .text
         global  asm_main
@@ -49,8 +49,10 @@ input_loop:
 
 init_clean:
 	mov	EAX, MAX_LENGTH
+	sub	EAX, ECX
 	xchg	ECX, EAX
-	sub	ECX, EAX
+	add	ECX, ECX
+
 	mov	EAX, 0
 	mov	EBX,input
 	mov	EDX,output
@@ -70,8 +72,11 @@ clean_input:
 	jmp	fin
 
 get_next_char:
+	cmp	ECX,0
+	jle	fin
 	mov	AL, [EBX]
 	inc	EBX
+	dec	ECX
 	ret
 
 save_a_space:
@@ -84,6 +89,8 @@ save_a_space:
 save_this_char:
 	mov	[EDX], AL
 	inc	EDX
+	cmp	AL,NF
+	je	fin
 	ret
 
 fin:
@@ -92,8 +99,7 @@ fin:
 
         popa
         mov     EAX, 0
-        leave
-        ret
+	leave
 
 
 

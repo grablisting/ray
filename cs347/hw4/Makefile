@@ -22,4 +22,4 @@ mstrebl : mstrebl.o
 	gcc $(CFLAGS) -o $@ $?
 
 clean :
-	rm *.o
+	rm mstrebl.o
