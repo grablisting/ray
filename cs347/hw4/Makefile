@@ -1,25 +1,28 @@
-#
-# Linux makefile
-# Use with make 
-#
 
 .SUFFIXES:
 .SUFFIXES: .o .asm .cpp .c
 
 AS=nasm
 ASFLAGS= -f elf
-PROGRAMS= 
-CFLAGS= -Wall -m32 driver.c asm_io.o
+CFLAGS= -Wall -m32
 CC=gcc
 
 .asm.o:
 	$(AS) $(ASFLAGS) $*.asm
 
-all:
-	make mstrebl
+.c.o:
+	$(CC) -c $(CFLAGS) $*.c
 
-mstrebl : mstrebl.o
-	gcc $(CFLAGS) -o $@ $?
+all: mstrebl asm_io.o substrng_c
 
-clean :
-	rm mstrebl.o
+substrng_c: substrng_c.o asm_io.o substrng_a.o
+	gcc $(CFLAGS) -osubstrng_c substrng_c.o asm_io.o substrng_a.o
+
+mstrebl: driver.o asm_io.o mstrebl.o strebl.o
+	gcc $(CFLAGS) -omstrebl driver.o asm_io.o mstrebl.o strebl.o
+
+asm_io.o : asm_io.asm
+	$(AS) $(ASFLAGS) -d ELF_TYPE asm_io.asm
+
+clean:
+	rm *.o
