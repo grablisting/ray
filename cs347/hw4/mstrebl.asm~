@@ -58,8 +58,9 @@ clean_input:
 
 	call	strebl			;Call string cleaning procedure
 	add	esp, 8			;Clean up the stack
-	mov	EAX, input
-	call	print_string
+
+	mov	EAX, input		;Load result of procedure
+	call	print_string		;Display to user
 	call	print_nl
 
 fin:

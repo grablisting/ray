@@ -1,3 +1,19 @@
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; file: substrng_c
+;
+; This program retrieves two strings from the user, then attempts to
+; match the second string within the first string.
+;
+; Ray Peters
+;
+; May 21, 2010
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 #include "cdecl.h"
 #include "stdio.h"
 #include "string.h"

@@ -60,8 +60,8 @@ string_match:
 	call	ascii_sum		;Find sum of Parent[EDX..EDX+childLength]
 
 	cmp	EAX, [childSum]		;Compare sum(Parent[EDX..EDX+childLength]) to childSum
-	;je	return_hit		;If equal, MATCH FOUND!
-	je	confirm_hit
+	je	return_hit		;If equal, MATCH FOUND!
+
 	inc	EBX
 	cmp	EBX, [exitCond]
 	jne	string_match		;If not at last possible match position then repeat
