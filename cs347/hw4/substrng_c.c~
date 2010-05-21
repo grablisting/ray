@@ -11,16 +11,16 @@ int main()
   char child[80] = "\0";
 
   printf ("Please enter a PARENT string: ");
-  gets(parent);
+  scanf("%s", &parent);
 
   printf ("Please enter a CHILD string: ");
-  gets(child);
+  scanf("%s", &child);
 
   ret_status = asm_main(parent, child);
   if (ret_status >= 0) {
-    printf("Position of the first match: %d \n", ret_status);
+    printf("Position of the first match: %d \n\n", ret_status);
   } else {
-    printf("No match could be made.\n");
+    printf("No match could be made.\n\n");
   }
 
   return ret_status;

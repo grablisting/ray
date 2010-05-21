@@ -17,8 +17,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 %include "asm_io.inc"
-%define child	ebp + 12
 %define parent	ebp + 8
+%define child	ebp + 12
 
 segment .data
 	NF	equ	0Ah
@@ -26,10 +26,7 @@ segment .data
 segment .bss
 childSum	resd 1
 childLength	resd 1
-parentLast	resd 1
-parentLength	resd 1
-lastPointer	resd 1
-firstPointer	resd 1
+exitCond	resd 1
 
 segment .text
         global  asm_main
@@ -38,74 +35,87 @@ asm_main:
         enter   0, 0
 
 	mov	EDX, [child]		;Load child string pointer
-	call	string_length_loop	;Find it's last character
-	sub	EDX, [child]		;Difference results in string length
+	call	string_length_loop	;Find location of last character
+	sub	EDX, [child]
 	mov	[childLength], EDX	;Store length
 
-	mov	ECX, [childLength]	;Load length of child string
+	mov	ECX, [childLength]	;Set childLength as counter
 	mov	EDX, [child]		;Load child string pointer
-	call	ascii_sum		;Returns ASCII sum in the EAX
-	mov	[childSum], EAX		;Store ascii hash value
+	call	ascii_sum
+	mov	[childSum], EAX		;Store ascii sum as hash value
 
-	mov	EDX, [parent]
-	call	string_length_loop
-	sub	EDX, [childLength]
-	mov	[parentLast], EDX
+	mov	EDX, [parent]		;Load the parent string pointer
+	call	string_length_loop	;Find location of last character
+	sub	EDX, [childLength]	;Determine index of the last possible match
+	inc	EDX			;Add one to match up until the null terminator
+	mov	[exitCond], EDX		;Save position for use as maximum iterations
 	
 	xor	EBX, EBX
 	xor	ECX, ECX
 	xor	EDX, EDX
-	mov	EBX, [parent]
+	mov	EBX, [parent]		;Load the parent string pointer
 
 string_match:
-	mov	ECX, [childLength]
-	mov	EDX, EBX
-	call	ascii_sum
+	mov	ECX, [childLength]	;Reset ECX counter to childLength
+	mov	EDX, EBX		;Set EDX to start from next position
+	call	ascii_sum		;Find sum of Parent[EDX..EDX+childLength]
 
-	cmp	EAX, [childSum]
-	je	return_hit
+	cmp	EAX, [childSum]		;Compare sum(Parent[EDX..EDX+childLength]) to childSum
+	je	return_hit		;If equal, MATCH FOUND!
 
 	inc	EBX
-	cmp	EBX, [parentLast]
-	jne	string_match
+	cmp	EBX, [exitCond]
+	jne	string_match		;If not at last possible match position: repeat
 	
 return_miss:
 	xor	EAX, EAX
-	dec	EAX
+	dec	EAX			;Return -1 to show no match could be made
 	jmp	fin
 	
 return_hit:
-	sub	EDX, [parent]
-	sub	EDX, [childLength]
+	sub	EDX, [parent]		;Get index of last char match
+	sub	EDX, [childLength]	;Get index of first char match
 	xor	EAX, EAX
-	mov	EAX, EDX
-	inc	EAX
+	mov	EAX, EDX		;Set return value
+	inc	EAX			;Add 1 to account for index start at 1
 	jmp	fin
 
+;
+;string_length_loop
+;
+;This function scrolls through the EDX until it finds a null terminator.
+;The EDX returns the position of the first null terminator's predecessor.
+;
+
 string_length_loop:
-	mov	EAX, [EDX]
-	inc	EDX
+	mov	EAX, [EDX]		;Load character at EDX
+	inc	EDX			;Point to next character
 	cmp	AL, 0
-	jne	string_length_loop
-	dec	EDX
+	jne	string_length_loop	;Continue while AL != null terminator
+	dec	EDX			;Point to predecessor
 	ret
 
+;
+;ascii_sum
+;
+;This function uses ECX as a loop counter and the EDX as the string pointer
+;The EAX returns the sum of the values of the string between EDX and EDX+ECX.
+;
+
 ascii_sum:
-	push	EBX
+	push	EBX			;Save EBX
 	xor	EAX, EAX
 	xor	EBX, EBX
-	call	ascii_sum_loop
+	call	ascii_sum_loop		;Get the sum
 	xor	EBX, EBX
-	pop	EBX
+	pop	EBX			;Restore EBX
 	ret
 
 ascii_sum_loop:
-	mov	BL, [EDX]
-	xchg	AL, BL
-	xchg	BL, AL
-	add	AX, BX
-	inc	EDX
-	loop	ascii_sum_loop
+	mov	BL, [EDX]		;Get a character
+	add	AX, BX			;Add the value to the sum
+	inc	EDX			;Point to next character
+	loop	ascii_sum_loop		;Repeat until ECX is 0
 	ret
 	
 fin:
