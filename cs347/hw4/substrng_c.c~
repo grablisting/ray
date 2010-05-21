@@ -7,14 +7,14 @@ int PRE_CDECL asm_main( char *, char * ) POST_CDECL;
 int main()
 {
   int ret_status;
-  char parent[80] = "\0";
-  char child[80] = "\0";
+  char parent[80] = "\0";	//Initialize all characters to null terminator
+  char child[80] = "\0";	//""
 
   printf ("Please enter a PARENT string: ");
-  scanf("%s", &parent);
+  gets(parent);
 
   printf ("Please enter a CHILD string: ");
-  scanf("%s", &child);
+  gets(child);
 
   ret_status = asm_main(parent, child);
   if (ret_status >= 0) {

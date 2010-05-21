@@ -2,13 +2,12 @@
 ;
 ; file: substrng_a.asm
 ;
-; This program searches for a child string within a parent
-; string.
+; This program searches for a child string within a parent string
+; by using the sum of it's ASCII characters as hash values.
 ;
-; Input: A parent string and a child string from the stack.
+; Input: A child string followed by a parent string from the stack.
 ;
-; Output: Returns the starting position of the first match.
-; 	Otherwise, returns -1.
+; Output: If hit, return index of first match, else -1 for miss.
 ;
 ; Ray Peters
 ;
@@ -46,14 +45,14 @@ asm_main:
 
 	mov	EDX, [parent]		;Load the parent string pointer
 	call	string_length_loop	;Find location of last character
-	sub	EDX, [childLength]	;Determine index of the last possible match
+	sub	EDX, [childLength]	;Determine index of the last feasible match
 	inc	EDX			;Add one to match up until the null terminator
 	mov	[exitCond], EDX		;Save position for use as maximum iterations
 	
-	xor	EBX, EBX
+	xor	EBX, EBX		;Cleaning house, before the party!
 	xor	ECX, ECX
 	xor	EDX, EDX
-	mov	EBX, [parent]		;Load the parent string pointer
+	mov	EBX, [parent]		;Load parent string; start party!
 
 string_match:
 	mov	ECX, [childLength]	;Reset ECX counter to childLength
@@ -65,13 +64,13 @@ string_match:
 
 	inc	EBX
 	cmp	EBX, [exitCond]
-	jne	string_match		;If not at last possible match position: repeat
+	jne	string_match		;If not at last possible match position then repeat
 	
 return_miss:
 	xor	EAX, EAX
 	dec	EAX			;Return -1 to show no match could be made
 	jmp	fin
-	
+
 return_hit:
 	sub	EDX, [parent]		;Get index of last char match
 	sub	EDX, [childLength]	;Get index of first char match
