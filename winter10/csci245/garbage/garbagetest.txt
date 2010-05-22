@@ -1,0 +1,75 @@
+(define f
+  (lambda (x y) (list y x)))
+(f (+ 2 3 4) (quote Hello))
+
+(define map
+  (lambda (f ls)
+    (if (null? ls)
+        ()
+        (cons (f (car ls))
+              (map f (cdr ls))))))
+
+(define double
+  (lambda (x) (* 2 x)))
+
+(map double (list 1 2 3 4 5 6 7 8 9))
+
+(map (lambda (x) (cons x x))
+     (list (+ 2 2)
+           (quote hello)
+           (quote (a b c))))
+
+(define even?
+   (lambda (x)
+      (if (zero? x) 1
+          (odd? (- x 1)))))
+
+(define odd?
+   (lambda (x)
+      (if (zero? x) ()
+          (even? (- x 1)))))
+
+(map even? (list 1 2 3 4 5 6 7))
+
+(define fibo1
+  (lambda (n)
+    (if (zero? n) 1
+        (if (zero? (- n 1)) 1
+            (+ (fibo1 (- n 1)) (fibo1 (- n 2)))))))
+
+(map fibo1 (list 1 2 3 4 5 6 7 8))
+
+(define fibo2
+  (lambda (n a b)
+    (if (zero? n) a
+        (fibo2 (- n 1) b (+ a b)))))
+
+(map (lambda (n) (fibo2 n 1 1)) 
+     (list 1 2 3 4 5 6 7 8))
+
+(define counter
+  (lambda (n)
+    (lambda ()
+      (set! n (+ n 1))
+      n)))
+
+(define x (counter 0))
+(define y (counter 100))
+(define z (counter 100000))
+
+(list (x) (z) (x) (y) (y) (y) (y) (x) (z) (z) (x))
+
+(define print (lambda (x) x))
+
+(define eatmem
+  (lambda (depth)
+    (if (zero? depth) 1
+        (+ (eatmem (- depth 1))
+           (eatmem (- depth 1))))))
+
+(define doom
+  (lambda (depth)
+    (print (list depth (quote ->) (eatmem depth)))
+    (doom (+ depth 1))))
+
+(doom 0)

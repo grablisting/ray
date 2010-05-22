@@ -1,0 +1,79 @@
+How do you show that H is a subspace of a larger vector space V?
+
+
+What does the determinant tell us about a given nxn matrix?
+
+
+How do you find out if a vector is inside a subspace?
+
+
+What are the ten axioms that define a vector space?
+
+
+Let A be a square matrix,
+What happens to the determinant after a row addition operation? A column operation?
+
+
+What happens to the determinant when two rows are interchanged?
+
+
+What happens to the determinant when one row is multiplied by a scalar?
+
+
+What is det(A * B) equal to?
+
+
+What is the function for cofactor expansion across any row?
+
+
+What is the rank of a matrix?
+
+
+What is the rank theorem?
+
+
+What defines a Column Space?
+
+
+What defines a null space?
+
+
+How do you determine if something is in the Null space of A? Column space of A?
+
+
+What defines a basis?
+
+
+How do you find the dimension of a column space or a null space?
+
+
+What defines the coordinate vector of x relative to a basis? (Also called a basis-coordinate vector of x)
+
+
+Given a Basis, how do you use the coordinate system?
+
+
+The column space of an mxn matrix is a subspace of R.... what?
+
+
+If A = [a_1 ... a_n] with the columns in R^m, then Col A is the same as... what?
+
+
+How do you test to see if a given vector is in Nul A?
+
+
+If the columns of an invertible nxn matrix form a basis for all of R... what?
+
+
+What is the standard basis for R^n?
+
+
+If A is an invertible matrix, then what other properties does it have concerning:
+1. The columns of A (3 statements)
+2. The rank of A (1 statement)
+3. The null space of A (2 statements)
+
+
+Chapter 2.9: Could R^3 possibly contain a four-dimensional subspace? explain.
+
+

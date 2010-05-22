@@ -1,0 +1,7 @@
+project Program4 is
+
+   for Main use ("solvesudoku.adb");
+   for Source_Files use ("sudoku_rules.ads", "solvesudoku.adb", "sudoku.adb", "sudoku_def.ads");
+
+end Program4;
+

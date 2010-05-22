@@ -1,0 +1,113 @@
+V "GNAT Lib v2009"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U cipher2%b		cipher2.adb		49b250eb NE OO SU KU
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-charac.ads		20090519112254 506ce725
+D a-chahan.ads		20090519112252 dcb15e96
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-ioexce.ads		20090519112312 be0900a0
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-unccon.ads		20090519112342 51e09df2
+D cipher2.adb		20100113160900 6b89fa13
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D system.ads		20090519112726 0e6ea6c5
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 12|1r6 2r6 8r22 14r4 15r4 17r4 18r4 20r4 21r4 23r4 24r4 25r4
+. 26r4 27r4 28r4 30r4 30r46 31r4 31r48 33r14 34r17 35r10 38r46 40r16 41r16
+. 46r16 47r16 50r16 51r16 54r7 55r7 56r7 58r4 59r4 61r4 62r4 63r4 64r4 65r4
+. 66r4 67r4 68r4
+X 2 a-charac.ads
+16K13*Characters 18e19 12|2r10 38r50
+X 3 a-chahan.ads
+39K24*Handling 147e28 12|2w21 38r61
+65V13*To_Lower{character} 12|38r70
+X 10 a-textio.ads
+51K13*Text_IO 509e16 12|1w10 8r26 14r8 15r8 17r8 18r8 20r8 21r8 23r8 24r8
+. 25r8 26r8 27r8 28r8 30r8 30r50 31r8 31r52 33r18 34r21 35r14 40r20 41r20
+. 46r20 47r20 50r20 51r20 54r11 55r11 56r11 58r8 59r8 61r8 62r8 63r8 64r8
+. 65r8 66r8 67r8 68r8
+54P9*File_Type(372R9) 12|8r34
+55n23*In_File{55E9} 12|30r58
+55n32*Out_File{55E9} 12|31r60
+89U14*Create 12|31r16
+90p7 File{54P9} 12|31r23
+91e7 Mode{55E9} 12|31r40
+92s7 Name{string} 12|31r70
+95U14*Open 12|30r16
+96p7 File{54P9} 12|30r22
+97e7 Mode{55E9} 12|30r38
+98s7 Name{string} 12|30r67
+101U14*Close 12|58r16 59r16
+101p22 File{54P9} 12|58r23 59r23
+168U14*New_Line 12|55r19
+168p24 File{54P9} 12|55r28
+169U14*New_Line 12|28r16 56r19 61r16 63r16 67r16
+171U14*Skip_Line 12|54r19
+171p25 File{54P9} 12|54r29
+174V13*End_Of_Line{boolean} 12|34r29
+174p26 File{54P9} 12|34r42
+186V13*End_Of_File{boolean} 12|33r26
+186p26 File{54P9} 12|33r39
+208U14*Get 12|35r22
+208p19 File{54P9} 12|35r27
+208e37 Item{character} 12|35r43
+210U14*Put 12|41r28 47r28 51r28
+210p19 File{54P9} 12|41r33 47r33 51r33
+210e37 Item{character} 12|41r50 47r50 51r50
+211U14*Put 12|40r28 46r28 50r28
+211e19 Item{character} 12|40r33 46r33 50r33
+245U14*Put 12|14r16 17r16 20r16 23r16 24r16 25r16 26r16 27r16 62r16 64r16
+. 65r16 66r16 68r16
+245s19 Item{string} 12|14r21 17r21 20r21 23r21 24r21 25r21 26r21 27r21 62r21
+. 64r21 65r21 66r21 68r21
+252U14*Get_Line 12|15r16 18r16 21r16
+253s7 Item{string} 12|15r26 18r26 21r26
+254i7 Last{natural} 12|15r40 18r44 21r39
+X 12 cipher2.adb
+4U11*Cipher2 4b11 69l5 69t12
+5E12 Lowercase{character} 37r18
+6E12 Uppercase{character} 43r18
+8p4 InData{10|54P9} 30m30 33r47 34r50 35r35 54r37 59m31
+8p12 OutData{10|54P9} 31m31 41r41 47r41 51r41 55r36 58m31
+9a4 Key{string} 21m34 26r29 38r79 44r46
+9a9 File{string} 15m34 24r29 30r75
+9a15 SaveFile{string} 18m34 31r78 65r29
+10i4 KeyLength{integer} 21m47 26r36 38r92 44r59
+10i15 FileLength{integer} 15m48 24r37 30r83
+10i27 SaveFileLength{integer} 18m52 31r90 65r41
+10i43 row{integer} 39m16 40r57 41r74 45m16 46r57 47r74
+10i48 offset{integer} 38m16 40r63 41r80 44m16 46r63 47r80
+10i56 Mark{integer} 38r83 42m16 42r24 44r50 48m16 48r24
+11e4 NextCh{character} 35m51 36r15 39r37 45r37 50r41 51r58
+

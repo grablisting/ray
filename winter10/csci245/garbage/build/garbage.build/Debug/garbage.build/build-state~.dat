@@ -1,0 +1,411 @@
+Tgarbage
+v7
+r0
+t289958384.346451
+cCheck dependencies
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004A769DAB00000000000000EE
+t1249287595
+s238
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp
+c000000004B8CC86600000000000009EC
+t1267517542
+s2540
+i"bignum.h"
+i<iostream>
+i<iomanip>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h
+c000000004B71CAEB000000000000058B
+t1265748715
+s1419
+i<iostream>
+i<vector>
+i<cmath>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o
+t1268265582
+s147492
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o
+t1268265583
+s91544
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/garbage.LinkFileList
+c000000004B98326D0000000000000490
+t1268265581
+s1168
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o
+t1268265583
+s72880
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o
+t1268265583
+s139184
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o
+t1268265583
+s88128
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o
+t2
+s0
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp
+c000000004B98205F000000000000022C
+t1268260959
+s556
+i"closure.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/closure.h
+c000000004B982F48000000000000017E
+t1268264776
+s382
+i<iostream>
+i"sexpr.h"
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp
+c000000004B981B9200000000000013FB
+t1268259730
+s5115
+i<iostream>
+i"cons.h"
+i"functions.h"
+i"environment.h"
+i"closure.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/cons.h
+c000000004B98222800000000000006F1
+t1268261416
+s1777
+i"sexpr.h"
+i"functions.h"
+i"number.h"
+i"symbol.h"
+i"managedenv.h"
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp
+c000000004B981BE90000000000000680
+t1268259817
+s1664
+i"environment.h"
+i<iostream>
+i"sexpr.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/environment.h
+c000000004B981BF7000000000000020F
+t1268259831
+s527
+i<string>
+i<map>
+i<cstdlib>
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp
+c000000004B981A300000000000000432
+t1268259376
+s1074
+i<iostream>
+i"functions.h"
+i"sexpr.h"
+i"symbol.h"
+i"number.h"
+i"cons.h"
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/functions.h
+c000000004B981A2200000000000002EF
+t1268259362
+s751
+i"sexpr.h"
+i"managedenv.h"
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp
+c000000004B9822B80000000000000192
+t1268261560
+s402
+i<iostream>
+i"sexpr.h"
+i"functions.h"
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp
+c000000004B9832590000000000000360
+t1268265561
+s864
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h
+c000000004B980E9C00000000000001F8
+t1268256412
+s504
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp
+c000000004B8CCBC40000000000000313
+t1267518404
+s787
+i<iostream>
+i"number.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/number.h
+c000000004B71CAC800000000000004D3
+t1265748680
+s1235
+i"sexpr.h"
+i<iostream>
+i"bignum.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp
+c000000004B981EE8000000000000081C
+t1268260584
+s2076
+i"sexpr.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h
+c000000004B9821FF00000000000003F2
+t1268261375
+s1010
+i<iostream>
+i<string>
+i<cstdlib>
+i<typeinfo>
+i"managedenv.h"
+i"bignum.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp
+c000000004B981C61000000000000022E
+t1268259937
+s558
+i<iostream>
+i"symbol.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/symbol.h
+c000000004B981C7F00000000000002AD
+t1268259967
+s685
+i"sexpr.h"
+i"managedenv.h"
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies289958381#289958381#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958381.842305
+e289958382.508890
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp289958381#289958382#0(0"0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp7809643567100341248#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958383.934202
+e289958384.346361
+r0
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: In constructor 'Closure::Closure()':
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `;' before '}' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: At global scope:
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:15: error: declaration of '~Closure' as non-member
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: In member function 'virtual Sexpr* Closure::apply(Sexpr*)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:22: error: invalid use of incomplete type 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:23: error: invalid use of incomplete type 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used
+lSLF07#2@64"Compile /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289958383#289958384#0(2208"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: In constructor 'Closure::Closure()':/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:5: error: expected primary-expression before '?' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `:' before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected primary-expression before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:6: error: expected `;' before '}' token/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:15: error: declaration of '~Closure' as non-member/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp: In member function 'virtual Sexpr* Closure::apply(Sexpr*)':/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:22: error: invalid use of incomplete type 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp:23: error: invalid use of incomplete type 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used19(4@44"Expected primary-expression before '?' token289958384#95#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#5#0#5#0#19"expected * before *0(4@44"Expected primary-expression before '?' token289958384#207#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#5#0#5#0#19"expected * before *0(4@44"Expected primary-expression before '?' token289958384#319#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#5#0#5#0#19"expected * before *0(4@44"Expected primary-expression before '}' token289958384#431#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@29"Expected `:' before '}' token289958384#543#97#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@44"Expected primary-expression before '}' token289958384#640#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@29"Expected `:' before '}' token289958384#752#97#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@44"Expected primary-expression before '}' token289958384#849#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@29"Expected `:' before '}' token289958384#961#97#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@44"Expected primary-expression before '}' token289958384#1058#112#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(4@29"Expected `;' before '}' token289958384#1170#97#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#6#0#6#0#19"expected * before *0(23@16"At global scope:289958384#1267#75#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#0#0#0#0#0"0(4@39"Declaration of '~Closure' as non-member289958384#1342#108#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#15#0#15#0#0"0(4@51"Invalid use of incomplete type 'struct Environment'289958384#1568#120#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#22#0#22#0#0"0(4@43"Forward declaration of 'struct Environment'289958384#1688#112#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#6#0#6#0#0"0(4@51"Invalid use of incomplete type 'struct Environment'289958384#1800#120#0(6@56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp289953759#23#0#23#0#0"0(4@43"Forward declaration of 'struct Environment'289958384#1920#112#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#6#0#6#0#0"0(23@16"At global scope:289958384#2032#72#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#0#0#0#0#0"0(22@36"'BASE_EXPONENT' defined but not used289958384#2104#104#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#10#0#10#0#24"'*' defined but not used0(0#0#56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp4300885448#1363"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o1#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958381.879368
+e289958382.400181
+r0
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::add_list(ManagedEnv)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:93: error: no matching function for call to 'Sexpr::add_list()'
+o/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h:21: note: candidates are: virtual Sexpr* Sexpr::add_list(ManagedEnv)
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::multiply_list(ManagedEnv)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:118: error: no matching function for call to 'Sexpr::multiply_list()'
+o/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h:23: note: candidates are: virtual Sexpr* Sexpr::multiply_list(ManagedEnv)
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::eval(ManagedEnv)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:210: error: expected primary-expression before 'env'
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:212: error: expected primary-expression before 'env'
+o/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:214: error: expected primary-expression before 'env'
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used
+lSLF07#2@61"Compile /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289958381#289958382#0(1346"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::add_list(ManagedEnv)':/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:93: error: no matching function for call to 'Sexpr::add_list()'/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h:21: note: candidates are: virtual Sexpr* Sexpr::add_list(ManagedEnv)/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::multiply_list(ManagedEnv)':/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:118: error: no matching function for call to 'Sexpr::multiply_list()'/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h:23: note: candidates are: virtual Sexpr* Sexpr::multiply_list(ManagedEnv)/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp: In member function 'virtual Sexpr* Cons::eval(ManagedEnv)':/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:210: error: expected primary-expression before 'env'/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:212: error: expected primary-expression before 'env'/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp:214: error: expected primary-expression before 'env'/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used9(4@52"No matching function for call to 'Sexpr::add_list()'289958382#119#118#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289952530#93#0#93#0#0"0(13@58"Candidates are: virtual Sexpr* Sexpr::add_list(ManagedEnv)289958382#237#122#0(6@52"/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h289954175#21#0#21#0#0"0(4@57"No matching function for call to 'Sexpr::multiply_list()'289958382#483#124#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289952530#118#0#118#0#0"0(13@63"Candidates are: virtual Sexpr* Sexpr::multiply_list(ManagedEnv)289958382#607#127#0(6@52"/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h289954175#23#0#23#0#0"0(4@40"Expected primary-expression before 'env'289958382#849#107#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289952530#210#0#210#0#19"expected * before *0(4@40"Expected primary-expression before 'env'289958382#956#107#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289952530#212#0#212#0#19"expected * before *0(4@40"Expected primary-expression before 'env'289958382#1063#107#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp289952530#214#0#214#0#19"expected * before *0(23@16"At global scope:289958382#1170#72#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#0#0#0#0#0"0(22@36"'BASE_EXPONENT' defined but not used289958382#1242#104#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#10#0#10#0#24"'*' defined but not used0(0#0#53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp4300885448#1357"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o1#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958383.589481
+e289958384.087496
+r0
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:7: error: expected unqualified-id before ')' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:9: error: expected unqualified-id before '{' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp: In constructor 'Environment::Environment(ManagedEnv)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected `(' before '=' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected `{' before '=' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp: At global scope:
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected unqualified-id before '=' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:15: error: expected unqualified-id before '{' token
+o/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:19: error: declaration of '~Environment' as non-member
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used
+lSLF07#2@68"Compile /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289958383#289958384#0(1070"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:7: error: expected unqualified-id before ')' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:9: error: expected unqualified-id before '{' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp: In constructor 'Environment::Environment(ManagedEnv)':/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected `(' before '=' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected `{' before '=' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:14: error: expected unqualified-id before '=' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:15: error: expected unqualified-id before '{' token/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp:19: error: declaration of '~Environment' as non-member/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used9(4@40"Expected unqualified-id before ')' token289958384#0#112#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#7#0#7#0#19"expected * before *0(4@40"Expected unqualified-id before '{' token289958384#112#112#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#9#0#9#0#19"expected * before *0(4@29"Expected `(' before '=' token289958384#341#102#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#14#0#14#0#19"expected * before *0(4@29"Expected `{' before '=' token289958384#443#102#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#14#0#14#0#19"expected * before *0(23@16"At global scope:289958384#545#79#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#0#0#0#0#0"0(4@40"Expected unqualified-id before '=' token289958384#624#113#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#14#0#14#0#19"expected * before *0(4@40"Expected unqualified-id before '{' token289958384#737#113#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#15#0#15#0#19"expected * before *0(4@43"Declaration of '~Environment' as non-member289958384#850#116#0(6@60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp289952617#19#0#19#0#0"0(22@36"'BASE_EXPONENT' defined but not used289958384#966#104#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#10#0#10#0#24"'*' defined but not used0(0#0#60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp4300885448#1371"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o1#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958382.400296
+e289958383.076461
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp289958382#289958383#0(0"0(0#0#58"/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp4300885448#1367"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958382.509001
+e289958383.044153
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp289958382#289958383#0(0"0(0#0#53"/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp7809643567100341248#1357"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958384.087703
+e289958384.089076
+r0
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958384#289958384#0(2330"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp: In copy constructor 'ManagedEnv::ManagedEnv(const ManagedEnv&)':/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:15: error: no matching function for call to 'ManagedEnv::assign(const ManagedEnv&)'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:19: note: candidates are: void ManagedEnv::assign(Environment*)/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp: In destructor 'ManagedEnv::~ManagedEnv()':/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:21: error: returning a value from a destructor/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp: In member function 'ManagedEnv& ManagedEnv::operator=(const ManagedEnv&)':/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:26: error: no matching function for call to 'ManagedEnv::assign(const ManagedEnv&)'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:19: note: candidates are: void ManagedEnv::assign(Environment*)/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:27: error: expected `;' before 'return'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:49: error: 'friend' used outside of class/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:51: error: no 'Environment& ManagedEnv::operator*(ManagedEnv&)' member function declared in class 'ManagedEnv'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:51: error: declaration of 'Environment& ManagedEnv::operator*(ManagedEnv&)' outside of class is not definition/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:52: error: expected unqualified-id before '{' token/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp: In member function 'void ManagedEnv::assign(Environment*)':/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:62: error: invalid use of incomplete type 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp:65: error: invalid use of incomplete type 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'15(4@72"No matching function for call to 'ManagedEnv::assign(const ManagedEnv&)'289958384#126#144#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#15#0#15#0#0"0(13@53"Candidates are: void ManagedEnv::assign(Environment*)289958384#270#122#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#19#0#19#0#0"0(4@35"Returning a value from a destructor289958384#496#107#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#21#0#21#0#0"0(4@72"No matching function for call to 'ManagedEnv::assign(const ManagedEnv&)'289958384#739#144#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#26#0#26#0#0"0(13@53"Candidates are: void ManagedEnv::assign(Environment*)289958384#883#122#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#19#0#19#0#0"0(4@28"Expected `;' before 'return'289958384#1005#100#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#27#0#27#0#19"expected * before *0(23@16"At global scope:289958384#1105#78#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#0#0#0#0#0"0(4@30"'friend' used outside of class289958384#1183#102#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#49#0#49#0#0"0(4@99"No 'Environment& ManagedEnv::operator*(ManagedEnv&)' member function declared in class 'ManagedEnv'289958384#1285#171#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#51#0#51#0#0"0(4@99"Declaration of 'Environment& ManagedEnv::operator*(ManagedEnv&)' outside of class is not definition289958384#1456#171#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#51#0#51#0#0"0(4@40"Expected unqualified-id before '{' token289958384#1627#112#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#52#0#52#0#19"expected * before *0(4@51"Invalid use of incomplete type 'struct Environment'289958384#1860#123#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#62#0#62#0#0"0(4@43"Forward declaration of 'struct Environment'289958384#1983#112#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#6#0#6#0#0"0(4@51"Invalid use of incomplete type 'struct Environment'289958384#2095#123#0(6@59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp289958361#65#0#65#0#0"0(4@43"Forward declaration of 'struct Environment'289958384#2218#112#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#6#0#6#0#0"0(0#0#59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp4300885448#1369"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o1#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958383.044250
+e289958383.589361
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp289958383#289958383#0(0"0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp4300885448#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958383.471975
+e289958383.934103
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp289958383#289958383#0(0"0(0#0#54"/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp4300885448#1359"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s289958383.076555
+e289958383.471797
+r0
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp: In member function 'virtual Sexpr* Symbol::eval(ManagedEnv)':
+o/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp:21: error: invalid use of incomplete type 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:
+o/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp289958383#289958383#0(526"/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp: In member function 'virtual Sexpr* Symbol::eval(ManagedEnv)':/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp:21: error: invalid use of incomplete type 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h:6: error: forward declaration of 'struct Environment'/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h: At global scope:/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h:10: warning: 'BASE_EXPONENT' defined but not used4(4@51"Invalid use of incomplete type 'struct Environment'289958383#119#119#0(6@55"/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp289952737#21#0#21#0#0"0(4@43"Forward declaration of 'struct Environment'289958383#238#112#0(6@57"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h289949212#6#0#6#0#0"0(23@16"At global scope:289958383#350#72#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#0#0#0#0#0"0(22@36"'BASE_EXPONENT' defined but not used289958383#422#104#0(6@53"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h287441515#10#0#10#0#24"'*' defined but not used0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp4300885448#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o1#
+
+CLd /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage normal x86_64
+r0
+

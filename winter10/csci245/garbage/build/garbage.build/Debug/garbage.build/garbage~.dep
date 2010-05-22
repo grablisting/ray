@@ -1,0 +1,11 @@
+0000000000e9e403000000000000052b 46bb9f98e28b8d3b2f86bba229ef046f ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o
+0000000000003cc50000000000000298 e2d85ab734138e6414942733a2f81569 ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o
+0000000000e9eb0a00000000000002f6 8281dc5cbfadcc0f31fb3ed913aeb6db ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o
+0000000000e9fb600000000000000f9d cc0e29a39ecd3d8dbdcfca80a247141b ffffffffffffffffffffffffffffffff 88128 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o
+0000000000fd2e6f00000000000005ca b95f640f36e224fbbe45d6fad3404b67 ffffffffffffffffffffffffffffffff 139184 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o
+0000000000e9eb0a00000000000006fa 007e7067de4d3ef2976d7beff8bb5bec ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o
+000000000000381800000000000002c3 c7c103baf615d65843826eb2c47a03b5 ffffffffffffffffffffffffffffffff 91544 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o
+000000000000389a000000000000037d dd102573f469bf7f6426a71f8c27367f ffffffffffffffffffffffffffffffff 72880 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o
+0000000000fd028d0000000000000c67 d8d5fad5e40b427f3e82eaab4b09a085 ffffffffffffffffffffffffffffffff 147492 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o
+000000004b981159000000000000158e 4a33358aa4d8edee9db2cb8cb01fdb57 ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o
+ffffffffffffffffffffffffffffffff 7ce9917cd625a041b17ad62fd61160c4 ffffffffffffffffffffffffffffffff 0 /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage

@@ -1,0 +1,80 @@
+V "GNAT Lib v2009"
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnnvnnnnnvnnnnnvnnnnnnvnnnnnnnnnnvnnvnnvnnnnnnnnnnnnnnnnnn
+
+U lists_generic%b	lists_generic.adb	bdb2ac84 NE OO PK GE KU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W unchecked_deallocation%s
+
+U lists_generic%s	lists_generic.ads	fbc981ba BN EE NE OO PK GE KU
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiinio.ads		20090519112342 949a7272
+D a-unccon.ads		20090519112342 51e09df2
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D lists_generic.ads	20100213230716 fbc981ba
+D lists_generic.adb	20100213230716 ddfa5705
+D system.ads		20090519112726 0e6ea6c5
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+D unchdeal.ads		20090519112734 66b7fd29
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 2r6
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|48] 15|2w10
+X 9 a-textio.ads
+51K13*Text_IO 509e16 15|1w10
+X 14 lists_generic.ads
+2+9 ElementType 6r56 9r42 15r15 15|8r56 36r42
+3k9*Lists_Generic 2z9 18l5 18e18 15|5b14 49l5 49t18
+4P9*List(12R9) 6r37 7r38 8r26 8r39 9r29 10r29 13c9 16r14 15|6r81 8r37 9r14
+. 17r38 18r14 27r26 27r39 36r29 41r29
+6U14*AddToFront 6=26 6>43 15|8b14 15l8 15t18
+6p26 L{4P9} 15|8b26 13r24 14m7
+6*43 Element{2+9} 15|8b43 12r25
+7U14*RemoveFront 7=27 15|17b14 25l8 25t19
+7p27 L{4P9} 15|17b27 20r10 21r18 22m10 22r15
+8V13*Copy{4P9} 8>19 15|27b13 32r44 34l8 34t12
+8p19 L{4P9} 15|27b19 29r10 32r31 32r49
+9V13*Display{2+9} 9>22 15|36b13 39l8 39t15
+9p22 L{4P9} 15|36b22 38r14
+10V13*IsEmpty{boolean} 10>22 15|41b13 48l8 48t15
+10p22 L{4P9} 15|41b22 43r10
+12R9 ListNode 13r24 14c9 17e14 15|6r63 11r19 32r21
+15*7 Value{2+9} 15|12m16 32r37 38r20
+16p7 Next{4P9} 15|13m16 22r17 32r55
+X 15 lists_generic.adb
+6U14 Dispose[33|20] 23r10
+9p7 Temp{14|4P9} 11m7 12r7 13r7 14r12
+18p7 Temp{14|4P9} 21m10 23m18
+X 33 unchdeal.ads
+17+9 Object 15|6r53
+18P9 Name(17+9) 15|6r73
+20u11*Unchecked_Deallocation 15|3w6 6r29
+

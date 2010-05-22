@@ -1,0 +1,414 @@
+Tgarbage
+v7
+r0
+t290204262.665161
+cCheck dependencies
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managed.o /Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004A769DAB00000000000000EE
+t1249287595
+s238
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp
+c000000004B9A87C00000000000000A38
+t1268418496
+s2616
+i"bignum.h"
+i<iostream>
+i<iomanip>
+i<cstdlib>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/bignum.h
+c000000004B71CAEB000000000000058B
+t1265748715
+s1419
+i<iostream>
+i<vector>
+i<cmath>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage
+t1268511462
+s167800
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o
+t1268418497
+s147532
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o
+t1268511405
+s108384
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o
+t1268511208
+s155664
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o
+t1268511337
+s194308
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o
+t1268510634
+s107288
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/garbage.LinkFileList
+c000000004B983EE80000000000000505
+t1268268776
+s1285
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o
+t1268510634
+s96360
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managed.o
+t1268511458
+s78560
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o
+t1268511435
+s95488
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o
+t1268511101
+s143416
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o
+t1268511252
+s113372
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o
+t1268511130
+s105796
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp
+c000000004B9BF2AC0000000000000351
+t1268511404
+s849
+i"closure.h"
+i"environment.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/closure.h
+c000000004B995A220000000000000403
+t1268341282
+s1027
+i<iostream>
+i"sexpr.h"
+i"managed.h"
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp
+c000000004B9BF3BC00000000000016E5
+t1268511676
+s5861
+i<iostream>
+i"cons.h"
+i"functions.h"
+i"closure.h"
+i"environment.h"
+i"managed.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/cons.h
+c000000004B9A854D00000000000009AB
+t1268417869
+s2475
+i"sexpr.h"
+i"environment.h"
+i"functions.h"
+i"number.h"
+i"symbol.h"
+i"managed.h"
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp
+c000000004B9BF26800000000000007C2
+t1268511336
+s1986
+i"environment.h"
+i<iostream>
+i"sexpr.h"
+i"managed.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/environment.h
+c000000004B9BEF8E000000000000069F
+t1268510606
+s1695
+i<string>
+i<map>
+i<cstdlib>
+i"managedenv.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp
+c000000004B9936A2000000000000044F
+t1268332194
+s1103
+i<iostream>
+i"functions.h"
+i"sexpr.h"
+i"symbol.h"
+i"number.h"
+i"cons.h"
+i"environment.h"
+i"managed.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/functions.h
+c000000004B9956720000000000000347
+t1268340338
+s839
+i"sexpr.h"
+i"managed.h"
+i"managedenv.h"
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp
+c000000004B995C5D00000000000001A0
+t1268341853
+s416
+i<iostream>
+i"managed.h"
+i"functions.h"
+i"environment.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp
+c000000004B9BF2E1000000000000038A
+t1268511457
+s906
+i"managed.h"
+i"sexpr.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managed.h
+c000000004B984B56000000000000020B
+t1268271958
+s523
+i<iostream>
+i"sexpr.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp
+c000000004B9BF2CB00000000000003A3
+t1268511435
+s931
+i"managedenv.h"
+i"environment.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.h
+c000000004B9A7BBC0000000000000236
+t1268415420
+s566
+i<iostream>
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp
+c000000004B9BF3C800000000000003AC
+t1268511688
+s940
+i<iostream>
+i"number.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/number.h
+c000000004B9957C20000000000000595
+t1268340674
+s1429
+i"sexpr.h"
+i<iostream>
+i"bignum.h"
+i"managed.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp
+c000000004B9BF2130000000000000884
+t1268511251
+s2180
+i"sexpr.h"
+i"managed.h"
+i"environment.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.h
+c000000004B99A16B00000000000003F3
+t1268359531
+s1011
+i<iostream>
+i<string>
+i<cstdlib>
+i<typeinfo>
+i"bignum.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp
+c000000004B9BF199000000000000026E
+t1268511129
+s622
+i<iostream>
+i"symbol.h"
+
+N/Users/raymond/Dropbox/notes/csci245/garbage/symbol.h
+c000000004B99585F000000000000033C
+t1268340831
+s828
+i"managed.h"
+i"environment.h"
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies290204262#290204262#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290111297.618382
+e290111297.619367
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp290111297#290111297#0(0"0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp4300885448#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/bignum.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/bignum.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204262.534496
+e290204262.535663
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp290204262#290204262#0(0"0(0#0#56"/Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp4300885448#1363"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/closure.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/closure.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204011.181331
+e290204011.182419
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp290204011#290204011#0(0"0(0#0#53"/Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp4300885448#1357"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/cons.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/cons.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204140.498300
+e290204140.504401
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp290204140#290204140#0(0"0(0#0#60"/Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp4300885448#1371"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/environment.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/environment.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290203434.036289
+e290203434.726981
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp290203434#290203434#0(0"0(0#0#58"/Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp4300885448#1367"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/functions.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/functions.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290203434.040603
+e290203434.661527
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp290203434#290203434#0(0"0(0#0#53"/Users/raymond/Dropbox/notes/csci245/garbage/main.cpp4300885448#1357"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/main.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managed.o /Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204262.536773
+e290204262.601599
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managed.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp290204262#290204262#0(0"0(0#0#56"/Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp4300885448#1363"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/managed.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managed.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204262.535731
+e290204262.536708
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp290204262#290204262#0(0"0(0#0#59"/Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp4300885448#1369"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/managedenv.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/managedenv.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290203905.401194
+e290203905.402222
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp290203905#290203905#0(0"0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/number.cpp4300885448#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/number.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/number.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290204140.497143
+e290204140.498235
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp290204140#290204140#0(0"0(0#0#54"/Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp4300885448#1359"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/sexpr.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/sexpr.o0#
+
+CCompileC build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290203937.974139
+e290203937.975201
+r1
+xCompileC
+xbuild/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o
+x/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp290203937#290203938#0(0"0(0#0#55"/Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp4300885448#1361"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-generated-files.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-own-target-headers.hmap -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-all-target-headers.hmap -iquote /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/garbage-project-headers.hmap -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -I/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/include -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources/x86_64 -I/Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/DerivedSources -c /Users/raymond/Dropbox/notes/csci245/garbage/symbol.cpp -o /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/symbol.o0#
+
+CLd /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage normal x86_64
+s290204262.601726
+e290204262.664949
+r1
+xLd
+x/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage
+xnormal
+xx86_64
+lSLF07#2@69"Link /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage290204262#290204262#0(0"0(0#0#0"4300885448#528"    cd /Users/raymond/Dropbox/notes/csci245/garbage    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -F/Users/raymond/Dropbox/notes/csci245/garbage/build/Debug -filelist /Users/raymond/Dropbox/notes/csci245/garbage/build/garbage.build/Debug/garbage.build/Objects-normal/x86_64/garbage.LinkFileList -mmacosx-version-min=10.6 -o /Users/raymond/Dropbox/notes/csci245/garbage/build/Debug/garbage0#
+

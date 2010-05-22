@@ -1,0 +1,155 @@
+V "GNAT Lib v2009"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnvnnnvnnnnnnnvnnvnnvvnnnvnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U assg3%b		assg3.adb		137588a1 NE OO SU IL KU
+W ada%s			ada.ads			ada.ali
+W ada.finalization.list_controller%s  a-filico.adb  a-filico.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.long_long_float_text_io%s  a-llftio.ads	a-llftio.ali
+W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
+W beautifulio%s		beautifulio.adb		beautifulio.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-charac.ads		20090519112254 506ce725
+D a-chlat1.ads		20090519112254 e9ee6d0a
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-flteio.ads		20090519112310 3407344a
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-llftio.ads		20090519112314 8fa2a9b5
+D a-llitio.ads		20090519112314 a7e55a31
+D a-stream.ads		20090519112324 34aca5be
+D a-string.ads		20090519112326 87b4230b
+D a-strmap.ads		20090519112326 5253a637
+D a-strunb.ads		20090519112326 f0549c04
+D a-suteio.ads		20090519112332 d857a771
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiflio.ads		20090519112340 5d91823c
+D a-tiinio.ads		20090519112342 949a7272
+D a-tiunio.ads		20090519112342 d721fe49
+D a-unccon.ads		20090519112342 51e09df2
+D assg3.adb		20100519031338 c9dcf1b8
+D beautifulio.ads	20100518180644 279ffe0b
+D beautifulio.adb	20100518180644 1aac90b0
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D system.ads		20090519112726 0e6ea6c5
+D s-conca2.ads		20090519112534 3d28f3da
+D s-conca3.ads		20090519112534 a208bec3
+D s-conca5.ads		20090519112534 e435dfcb
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 23|1r6 2r6 16r10 24r7 28r10 38r7 38r49 40r17 41r10 42r13 47r7
+. 51r7 51r49 55r13 59r7 67r7 71r7 72r7 79r16 81r16 84r10 86r7 116r4
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[20|48] 23|2w10 55r17 79r20
+X 18 a-textio.ads
+51K13*Text_IO 509e16 23|1w10 16r14 24r11 28r14 38r11 38r53 40r21 41r14 42r17
+. 47r11 51r11 51r53 59r11 67r11 71r11 72r11 81r20 84r14 86r11 116r8
+54P9*File_Type(372R9)
+55n23*In_File{55E9} 23|38r61 51r61
+76I12*Field{integer}
+95U14*Open 23|38r19 51r19
+96p7 File{54P9} 23|38r25 51r25
+97e7 Mode{55E9} 23|38r41 51r41
+98s7 Name{string} 23|38r70 51r70
+101U14*Close 23|47r19 59r19
+101p22 File{54P9} 23|47r26 59r26
+169U14*New_Line 23|28r22 71r19 72r19 84r22 86r19 116r16
+174V13*End_Of_Line{boolean} 23|42r25
+174p26 File{54P9} 23|42r38
+186V13*End_Of_File{boolean} 23|40r29
+186p26 File{54P9} 23|40r42
+208U14*Get 23|41r22
+208p19 File{54P9} 23|41r27
+208e37 Item{character} 23|41r43
+211U14*Put 23|24r19
+245U14*Put 23|16r22 67r19 81r28
+X 20 a-tiinio.ads
+53U14*Get 23|55r33[8|18]
+54p7 File{18|54P9} 23|55r38[8|18]
+55i7 Item{integer} 23|55r54[8|18]
+68U14*Put 23|79r36[8|18]
+70i7 Width{18|76I12} 23|79r46[8|18]
+X 23 assg3.adb
+5U11*assg3 5b11 118l5 118t10
+7A9 DataArray(integer)<integer><integer> 8r30 49r24
+8P9 pDataArray(7A9) 32r75 33r19 64r49 91r17
+10K12 Beautiful_IO[24|13] 11r8
+13U14 myRepeat 13b14 13>24 13>38 18l8 18t16 23r7 25r7
+13s24 Obj{string} 16r27
+13i38 Times{natural} 15r21
+15i11 x{integer}
+21U14 NumLabel 21b14 21>24 21>48 21>63 21>88 30l8 30t16 69r10 75r10 113r7
+. 114r7
+21i24 Leading{natural} 23r21 69r20 75r20 113r17 114r17
+21i48 Num{natural} 24r61 69r34 75r34 113r31 114r31
+21i63 Trailing{natural} 25r22 113r41 114r43
+21i88 NewLines{natural} 27r21 113r56 114r58
+27i11 x{integer}
+32V13 BuildTwoDimensionalArrayFromFileName{8P9} 32b13 32>51 62l8 62t44 91r31
+32s51 Source{string} 38r78 51r78
+33p7 pNewArray{8P9} 49m7 50r7 55r62 61r14
+34p7 InFile{24|17P12[10]} 38m33 40r50 41r35 42r46 47m34 51m33 55r46 59m34
+35i7 size{integer} 43m13 43r21 49r40 49r51 53r21 54r24
+36e7 temp{character} 41m51
+53i11 x{integer} 54r19 55r77
+54i14 y{integer} 55r80
+64U14 PrintTwoDimensionalArray 64b14 64>40 87l8 87t32 94r4
+64p40 Source{8P9} 68r16 74r16 76r19 77r20
+65i7 val{integer} 77m13 78r16 79r41
+68i11 x{integer} 69r41
+74i11 x{integer} 75r41 77r32
+76i14 y{integer} 77r35
+90r4 InputFile{24|16R12[10]} 91r80
+91p4 Collection{8P9} 94r30 98r13 98r35 100r14 101r32 103r17 107r19 108r17
+. 109r31
+92i4 min{integer} 100m7 101r13 103m10 105m7 109r49 110m13 114r38
+92i9 val{integer} 99m7 101r26 102m10 102r17 103r36 105r14 108m10 109r13 109r25
+98i8 x{integer} 100r29 103r33 107r16 108r33 109r46 113r38
+107i11 y{integer} 108r36 110r20
+X 24 beautifulio.ads
+11i4 LineLength{natural} 23|10r45
+13k9*BeautifulIO 23|3w6 10r32 24|34e16
+16R12 BigString{15|45R9} 23|90r16[10]
+17P12 File{18|54P9} 23|34r19[10]
+20V13 Stringify{string} 23|91r69[10]
+32V13 Include{16R12[23|10]} 23|90r29[10]
+

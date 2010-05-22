@@ -1,0 +1,7 @@
+project Program1 is
+
+   for Source_Files use ("program1.adb");
+   for Main use ("program1.adb");
+
+end Program1;
+
