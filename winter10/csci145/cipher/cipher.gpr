@@ -1,6 +1,0 @@
-project Cipher is
-
-   for Object_Dir use "..\Project1";
-
-end Cipher;
-
