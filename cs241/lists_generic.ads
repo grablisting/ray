@@ -13,10 +13,14 @@ PACKAGE Lists_Generic IS
       Tail : pNode;
    END RECORD;
 
-   PROCEDURE AddToFront (L : IN OUT List; Element : IN ElementType);
-   PROCEDURE AddToEnd (L : IN OUT List; Element : IN ElementType);
-   PROCEDURE RemoveFront (L : IN OUT List);
-   PROCEDURE PopFront (L : IN OUT List; Element : IN OUT ElementType);
+   FUNCTION CopyNode (E : pNode) RETURN pNode;
+   FUNCTION CopyList (L : List) RETURN List;
+   PROCEDURE Push (L : IN OUT List; Element : IN ElementType);
+   PROCEDURE Add (L : IN OUT List; Element : IN ElementType);
+   PROCEDURE Pop (L : IN OUT List; E : OUT pNode);
+   FUNCTION Find (L : List; Element : ElementType) RETURN pNode;
+
+   PROCEDURE Extract (L : IN OUT List; E : IN OUT ElementType; Result : IN OUT pNode);
    FUNCTION GetNext (Element : pNode) RETURN pNode;
    FUNCTION RetrieveFront (L : List) RETURN pNode;
    FUNCTION IsEmpty (L : List) RETURN Boolean;

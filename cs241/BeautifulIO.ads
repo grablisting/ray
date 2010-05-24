@@ -5,10 +5,12 @@ WITH Ada.Float_Text_IO;
 WITH Ada.Integer_Text_IO;
 WITH Ada.Long_Long_Integer_Text_IO;
 WITH Ada.Long_Long_Float_Text_IO;
+WITH lists_generic;
 
 GENERIC
 
    LineLength : Natural;
+   MaxLineLength : Natural;
 
 PACKAGE BeautifulIO IS
 
@@ -16,10 +18,14 @@ PACKAGE BeautifulIO IS
    SUBTYPE BigString IS Str.Unbounded_String;
    SUBTYPE File IS Ada.Text_IO.File_Type;
 
+   PROCEDURE Spaces (num : Natural);
+   PROCEDURE Clear;
+   PROCEDURE Clear (num : Natural);
+   PROCEDURE myRepeat (Obj : String; Times : Natural);
    FUNCTION BigStringify (That_Is_The_Question : String) RETURN BigString;
    FUNCTION Stringify (Or_Not_To_String : BigString) RETURN String;
 
-   PROCEDURE PageBreak (Message : String; Lines : Natural);
+   PROCEDURE PageBreak (Message : String);
    PROCEDURE PrintString (ExtraLong : Boolean; Name : String; Value : String; ExtraLineBreaks : Natural);
    PROCEDURE PrintBigString (ExtraLong : Boolean; Name : String; Value : BigString; ExtraLineBreaks : Natural);
    PROCEDURE PrintInt (ExtraLong : Boolean; Name : String; Value : Integer; ExtraLineBreaks : Natural);
@@ -29,6 +35,8 @@ PACKAGE BeautifulIO IS
    FUNCTION BigPercentage (Thing1 : Long_Long_Integer; Thing2 : Integer) RETURN Float;
 
    FUNCTION AskForValidFileName (Title : String; OutputBool : Boolean) RETURN BigString;
+   FUNCTION Ask (Question : String) RETURN Boolean;
    FUNCTION Include (Title, Location : String) RETURN BigString;
+   FUNCTION Request (Title : String) RETURN BigString;
 
 END BeautifulIO;

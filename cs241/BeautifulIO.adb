@@ -10,41 +10,69 @@ PACKAGE BODY BeautifulIO IS
       RETURN Str.To_Unbounded_String(That_Is_The_Question);
    END BigStringify;
 
+   PROCEDURE Clear IS
+   BEGIN
+      Ada.Text_IO.New_Line;
+   END Clear;
 
-   PROCEDURE PageBreak (Message : String; Lines : Natural) IS
-      breaks : Integer := Lines / 2 + 1;
-      MaxBreakLength : Integer := LineLength * 4;
-      TextWrapper : Integer := MaxBreakLength - Message'Length - 12;
+   PROCEDURE Clear (num : Natural) IS
+   BEGIN
+      FOR x IN 1 .. num LOOP
+         Clear;
+      END LOOP;
+   END Clear;
+
+   PROCEDURE Spaces(num : Natural) IS
+   BEGIN
+      myRepeat (" ", num);
+   END Spaces;
+
+
+
+   PROCEDURE myRepeat (Obj : String; Times : Natural) IS
+   BEGIN
+      FOR x IN 1 .. Times LOOP
+         Ada.Text_IO.Put (Obj);
+      END LOOP;
+   END myRepeat;
+
+   PROCEDURE PageBreak (Message : String) IS
+      breaks : Natural := 2;
+      TextWrapper : Integer := MaxLineLength - Message'Length;
    BEGIN --PageBreak
-      Ada.Text_IO.New_Line;
-      FOR x IN 1..breaks LOOP
-         FOR x IN 1..MaxBreakLength LOOP
-            Ada.Text_IO.Put ("-");
-         END LOOP;
-         Ada.Text_IO.New_Line;
+      Clear;
+      FOR x IN 0..breaks LOOP
+         Spaces (x);
+         myRepeat ("-", 5);
+         IF x = breaks THEN
+            Spaces (MaxLineLength);
+         ELSE
+            myRepeat ("-", MaxLineLength + x - 1);
+         END IF;
+         myRepeat("-", 5);
+         Clear;
       END LOOP;
 
-      Ada.Text_IO.Put ("----- ");
-      FOR x IN 1..TextWrapper/2 LOOP
-         Ada.Text_IO.Put (" ");
-         TextWrapper := TextWrapper - 1;
-      END LOOP;
-
+      Spaces(breaks + 1);
+      myRepeat("-", 5);
+      Spaces (TextWrapper / 2);
       Ada.Text_IO.Put (Message);
+      Spaces (TextWrapper - TextWrapper / 2);
+      myRepeat("-", 5);
+      Clear;
 
-      FOR x IN 1..TextWrapper LOOP
-         Ada.Text_IO.Put (" ");
+      FOR x IN REVERSE 0 .. breaks LOOP
+         Spaces (x);
+         myRepeat ("-", 5);
+         IF x = breaks THEN
+            Spaces (MaxLineLength);
+         ELSE
+            myRepeat ("-", MaxLineLength + x - 1);
+         END IF;
+         myRepeat("-", 5);
+         Clear;
       END LOOP;
-      Ada.Text_IO.Put (" -----");
-      Ada.Text_IO.New_Line;
-
-      FOR x IN 1..breaks LOOP
-         FOR x IN 1..MaxBreakLength LOOP
-            Ada.Text_IO.Put ("-");
-         END LOOP;
-         Ada.Text_IO.New_Line;
-      END LOOP;
-      Ada.Text_IO.New_Line;
+      Clear;
    END PageBreak;
 
 
@@ -96,7 +124,6 @@ PACKAGE BODY BeautifulIO IS
       FOR x IN 1..ExtraLineBreaks LOOP
          Ada.Text_IO.New_Line;
       END LOOP;
-
    END PrintFloat;
 
    PROCEDURE PrintString (ExtraLong : Boolean; Name : String; Value : String; ExtraLineBreaks : Natural) IS
@@ -152,40 +179,67 @@ PACKAGE BODY BeautifulIO IS
 
             IF OutputBool THEN
                Ada.Text_IO.Create (File => temp, Mode => Ada.TexT_IO.In_File, Name => Stringify(FileName));
+               PrintString (true, "Beautiful success!", "Created " & Title & " (" & Stringify(FileName) & ")!", 1);
             ELSE
                Ada.Text_IO.Open (File => temp, Mode => Ada.Text_IO.In_File, Name => Stringify(FileName));
+               PrintString (true, "Beautiful success!", "Loaded " & Stringify(FileName) & "!", 1);
             END IF;
-
             Ada.Text_IO.Close (File => temp);
 
-            PrintString(true, "Beautiful success!", "", 2);
             RETURN FileName;
          EXCEPTION
-            WHEN Ada.Text_IO.Name_Error =>
+            WHEN OTHERS =>
                Ada.Text_IO.New_Line;
-         PrintString(false, "ERROR...", "I couldn't find " & Stringify(FileName) & "!! :(", 0);
-               Ada.Text_IO.New_Line;
-               Ada.Text_IO.New_Line;
+               IF OutputBool THEN
+                  PrintString (true, "ERROR...", "I couldn't create " & Stringify (FileName) & "!! :(", 2);
+               ELSE
+                  PrintString (true, "ERROR...", "I couldn't find " & Stringify (FileName) & "!! :(", 2);
+               END IF;
          END;
       END LOOP;
    END AskForValidFileName;
 
+   FUNCTION Ask (Question : String) RETURN Boolean IS
+      Reply : Character;
+   BEGIN --Ask
+      Ada.Text_IO.New_Line;
+      PrintString (true, Question & " (y/n)?", "", 0);
+      Ada.Text_IO.Get (Reply);
+      Ada.Text_IO.Skip_Line;
+
+      CASE Reply IS
+         WHEN 'y' =>
+            RETURN true;
+         WHEN 'Y' =>
+            RETURN true;
+         WHEN OTHERS =>
+            RETURN false;
+      END CASE;
+   END Ask;
+
+
    FUNCTION Include (Title, Location : String) RETURN BigString IS
       temp : File;
    BEGIN --Include
-      Ada.Text_IO.Open (File => temp, Mode => Ada.Text_IO.In_File, Name => Location);
-      Ada.Text_IO.Close (File => temp);
-      Ada.Text_IO.New_Line;
-      PrintString(true, "Beautiful success!", "Loaded " & Title & " (" & Location & ")!", 2);
-      Ada.Text_IO.New_Line;
-      RETURN BigStringify(Location);
+      IF Ask ("Autoload " & Title & " from " & Location) THEN
+         Ada.Text_IO.Open (File => temp, Mode => Ada.Text_IO.In_File, Name => Location);
+         Ada.Text_IO.Close (File => temp);
+         PrintString (true, "Beautiful success!", "Loaded " & Location & "!", 1);
+         RETURN BigStringify(Location);
+      ELSE
+         RETURN AskForValidFileName(Title, false);
+      END IF;
    EXCEPTION
       WHEN Ada.Text_IO.Name_Error =>
          Ada.Text_IO.New_Line;
-         PrintString(false, "ERROR...", "I couldn't find " & Location & "!! :(", 0);
-         Ada.Text_IO.New_Line;
-         Ada.Text_IO.New_Line;
+         PrintString(true, "ERROR...", "I couldn't find " & Location & "!! :(", 2);
          RETURN AskForValidFileName(Title, false);
    END Include;
+
+   FUNCTION Request (Title : String) RETURN BigString IS
+      temp : File;
+   BEGIN --Request
+      RETURN AskForValidFileName(Title, true);
+   END Request;
 
 END BeautifulIO;
