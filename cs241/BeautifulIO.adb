@@ -10,69 +10,67 @@ PACKAGE BODY BeautifulIO IS
       RETURN Str.To_Unbounded_String(That_Is_The_Question);
    END BigStringify;
 
-   PROCEDURE Clear IS
+   PROCEDURE Clear (To : File_Type := Standard_Output) IS
    BEGIN
-      Ada.Text_IO.New_Line;
+      Ada.Text_IO.New_Line (File => To);
    END Clear;
 
-   PROCEDURE Clear (num : Natural) IS
+   PROCEDURE Clear (num : Natural; To : File_Type := Standard_Output) IS
    BEGIN
       FOR x IN 1 .. num LOOP
-         Clear;
+         Clear (To);
       END LOOP;
    END Clear;
 
-   PROCEDURE Spaces(num : Natural) IS
+   PROCEDURE Spaces(num : Natural; To : File_Type := Standard_Output) IS
    BEGIN
-      myRepeat (" ", num);
+      myRepeat (" ", num, To);
    END Spaces;
 
-
-
-   PROCEDURE myRepeat (Obj : String; Times : Natural) IS
+   PROCEDURE myRepeat (Obj : String; Times : Natural; To : File_Type := Standard_Output) IS
    BEGIN
       FOR x IN 1 .. Times LOOP
-         Ada.Text_IO.Put (Obj);
+         Ada.Text_IO.Put (File => To, Item => Obj);
       END LOOP;
    END myRepeat;
 
-   PROCEDURE PageBreak (Message : String) IS
+   PROCEDURE PageBreak (Message : String; Here : File_Type := Standard_Output) IS
       breaks : Natural := 2;
       TextWrapper : Integer := MaxLineLength - Message'Length;
    BEGIN --PageBreak
-      Clear;
+      Clear (Here);
       FOR x IN 0..breaks LOOP
-         Spaces (x);
-         myRepeat ("-", 5);
+         Spaces (x, Here);
+         myRepeat ("-", 5, Here);
          IF x = breaks THEN
-            Spaces (MaxLineLength);
+            Spaces (MaxLineLength, Here);
          ELSE
-            myRepeat ("-", MaxLineLength + x - 1);
+            myRepeat ("-", MaxLineLength + x - 1, Here);
          END IF;
-         myRepeat("-", 5);
-         Clear;
+         myRepeat("-", 5, Here);
+         Clear (Here);
       END LOOP;
 
-      Spaces(breaks + 1);
-      myRepeat("-", 5);
-      Spaces (TextWrapper / 2);
-      Ada.Text_IO.Put (Message);
-      Spaces (TextWrapper - TextWrapper / 2);
-      myRepeat("-", 5);
-      Clear;
+      Spaces(breaks + 1, Here);
+      myRepeat("-", 5, Here);
+      Spaces (TextWrapper / 2, Here);
+      Ada.Text_IO.Put (Here, Message);
+      Spaces (TextWrapper - TextWrapper / 2, Here);
+      myRepeat("-", 5, Here);
+      Clear(Here);
 
       FOR x IN REVERSE 0 .. breaks LOOP
-         Spaces (x);
-         myRepeat ("-", 5);
+         Spaces (x, Here);
+         myRepeat ("-", 5, Here);
          IF x = breaks THEN
-            Spaces (MaxLineLength);
+            Spaces (MaxLineLength, Here);
          ELSE
-            myRepeat ("-", MaxLineLength + x - 1);
+            myRepeat ("-", MaxLineLength + x - 1, Here);
          END IF;
-         myRepeat("-", 5);
-         Clear;
+         myRepeat("-", 5, Here);
+         Clear(Here);
       END LOOP;
-      Clear;
+      Clear(Here);
    END PageBreak;
 
 
@@ -202,7 +200,7 @@ PACKAGE BODY BeautifulIO IS
    FUNCTION Ask (Question : String) RETURN Boolean IS
       Reply : Character;
    BEGIN --Ask
-      Ada.Text_IO.New_Line;
+      Clear;
       PrintString (true, Question & " (y/n)?", "", 0);
       Ada.Text_IO.Get (Reply);
       Ada.Text_IO.Skip_Line;

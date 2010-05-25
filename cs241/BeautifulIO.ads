@@ -1,4 +1,5 @@
 WITH Ada.Text_IO;
+USE Ada.Text_IO;
 WITH Ada.Strings.Unbounded;
 WITH Ada.Text_IO.Unbounded_IO;
 WITH Ada.Float_Text_IO;
@@ -18,14 +19,15 @@ PACKAGE BeautifulIO IS
    SUBTYPE BigString IS Str.Unbounded_String;
    SUBTYPE File IS Ada.Text_IO.File_Type;
 
-   PROCEDURE Spaces (num : Natural);
-   PROCEDURE Clear;
-   PROCEDURE Clear (num : Natural);
-   PROCEDURE myRepeat (Obj : String; Times : Natural);
+
+   PROCEDURE Spaces (num : Natural; To : File := Standard_Output);
+   PROCEDURE Clear (To : File := Standard_Output);
+   PROCEDURE Clear (num : Natural; To : File := Standard_Output);
+   PROCEDURE myRepeat (Obj : String; Times : Natural; To : File := Standard_Output);
    FUNCTION BigStringify (That_Is_The_Question : String) RETURN BigString;
    FUNCTION Stringify (Or_Not_To_String : BigString) RETURN String;
 
-   PROCEDURE PageBreak (Message : String);
+   PROCEDURE PageBreak (Message : String; Here : File := Standard_Output);
    PROCEDURE PrintString (ExtraLong : Boolean; Name : String; Value : String; ExtraLineBreaks : Natural);
    PROCEDURE PrintBigString (ExtraLong : Boolean; Name : String; Value : BigString; ExtraLineBreaks : Natural);
    PROCEDURE PrintInt (ExtraLong : Boolean; Name : String; Value : Integer; ExtraLineBreaks : Natural);
