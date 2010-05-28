@@ -35,7 +35,7 @@ segment .data
 segment .bss
 	rows	resb	1		;Spaces for the number of rows
 	cols	resb	1		;Space for number of columns
-	input	resb	120		;Make space for user input
+	input	resb	100		;Make space for user input
 
 segment .text
         global  asm_main, transpose_matrix
@@ -51,19 +51,18 @@ asm_main:
 	call	new_matrix
 	call	print_matrix
 
-	call	pack_matrix
-	call	transpose_matrix
-	add	esp, 12
-	jmp	fin
-
-pack_matrix:
-	mov	EAX, rows
-	push	EAX
 	mov	EAX, cols
+	push	EAX
+	mov	EAX, rows
 	push	EAX
 	mov	EAX, input
 	push	EAX
-	ret
+	call	transpose_matrix
+	pop	EAX
+	call	print_matrix
+	add	ESP, 12
+	jmp	fin
+
 
 new_matrix:
 	mov	EAX, rowmsg
@@ -138,6 +137,8 @@ print_matrix_loop:
 	XOR	EAX, EAX
 	mov	AL, [EBX]
 	call	print_int
+	mov	EAX, ' '
+	call	print_char
 	inc	EBX
 
 	inc	CL
@@ -162,9 +163,6 @@ fin:
 	call	print_nl
 	call	print_nl
 	;dump_regs 5
-	call	transpose_matrix
-	call	print_nl
-	call	print_nl
 
         popa
         mov     EAX, 0
@@ -189,15 +187,61 @@ fin:
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-%define	rows	[esp + 16]
-%define	cols	[esp + 12]
-%define	matrix	[esp + 8]
+%define	dims	ebp + 12
+%define	matrix	ebp + 16
+
+segment .bss
+	trows	resb	1
+	tcols	resb	1
+	trans	resb	100	;Space for new matrix
 
 segment .text
 transpose_matrix:
-	mov	EAX, hello
-	call	print_string
-	call	print_nl
-	ret
+	enter	0, 0
 
+	xor	EAX, EAX
+	xor	EBX, EBX
+	xor	ECX, ECX
+	xor	EDX, EDX
+
+	mov	EDX, [dims]
+	mov	AL, [EDX]
+	call	print_int
+	call	print_nl
+	mov	[tcols], AL
+	inc	EDX
+	mov	AL, [EDX]
+	call	print_int
+	call	print_nl
+	mov	[trows], AL
+	
+	mov	EBX, trans
+	mov	EDX, [matrix]
+	mov	CL, AL
+
+invert_matrix_start:
+	push	ECX
+	call	print_nl
+	mov	CL, [tcols]
+
+invert_matrix_loop:
+	mov	AL, [EDX]
+	mov	[EBX], AL
+	mov	AL, [trows]
+	call	print_int
+	call	print_nl
+	add	DL, AL
+	inc	EBX
+
+	loop	invert_matrix_loop
+
+	;mov	EDX, [matrix]
+	;inc	EDX
+	pop	ECX
+	loop	invert_matrix_start
+	
+
+	leave
+	mov	EAX, trans
+	ret
 
