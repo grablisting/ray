@@ -48,6 +48,7 @@ asm_main:
 
 	call	transpose_matrix
 	add	ESP, 8			;Clean up the stack pointer
+
 	mov	EBX, trans
 	call	print_matrix		;Print result
 
@@ -192,62 +193,59 @@ clear_regs:
 %define	trans	ebp + 8
 %define	cols	ebp - 4
 %define	rows	ebp - 8
+%define	last	ebp - 12
 
 segment .text
 transpose_matrix:
-	enter	8, 0			;Make space for 2 counters
+	enter	12, 0			;Make space for 2 counters
 	call	clear_regs
+	call	print_nl
 
 	mov	EDX, [trans]		;Load address for new matrix
 	mov	EBX, [matrix]		;Load provided matrix
 
 	mov	AL, [EBX]
-	mov	[rows], byte 1		;Initialize row counter
+	mov	[rows], AL		;Initialize row counter
+	mov	[trans], AL
+	call	print_int
+	call	print_nl
 	inc	EBX
-	mov	CL, [EBX]
-	mov	[cols], byte 1		;Initialize column counter
+	inc	EDX
+
+
+	mov	AL, [EBX]
+	mov	[cols], AL
+	imul	AX, [rows]
+	call	print_int
+	call	print_nl
+	add	EAX, [matrix]
+	mov	[last], AX
 	inc	EBX
-
-	mov	[EDX], CL		;Save column total as row total
 	inc	EDX
-	mov	[EDX], AL		;Save row total as column total
+	mov	[rows], byte 0
+
+newrow:
+	call	print_nl
+	mov	CL, [cols]
+	call	newcol
+	mov	EDX, [trans]
 	inc	EDX
-
-	xor	EAX, EAX
-	xor	ECX, ECX
-
-outer:
-	mov	EBX, [matrix]		;reset input pointer
-	inc	byte[cols]		;point to next column
-	add	EBX, [cols]		;Add offset to input pointer
-	mov	CL, 1			;Reset col counter
-
-trans_loop:
-	mov	AL, [EBX]		;Get a character
-	mov	[EDX], AL		;Save a character
 	inc	EDX
-	call	inc_origin
-	mov	EAX, [trans]
-	mov	AL, [EAX]
-	inc	CL			;Check to see if we've read enough
-	cmp	CL, AL			;characters for the current row
-	jle	trans_loop		;If false, continue reading
-
-	inc	byte[rows]		;Point to next row
-	mov	EAX, [trans]		;Load number of rows we need
-	mov	AL, [EAX]
-	cmp	[rows], AL		;Exit when we have the last row
-	jle	outer
+	add	EDX, [rows]
+	inc	byte [rows]
+	cmp	byte [rows], 3
+	jl	newrow
 	jmp	exit
 
-inc_origin:
-	push	ECX			;Save state of ECX counter
+newcol:
 	xor	EAX, EAX
-	xor	ECX, ECX
-	mov	ECX, [trans]
-	mov	AL, [ECX]		;Offset the input pointer by the number
-	add	EBX, EAX		;of rows in the new array
-	pop	ECX			;Restore ECX
+	mov	AL, [EBX]
+	inc	EBX
+	call	print_int
+	call	print_nl
+	mov	[EDX], AL
+	add	EDX, [cols]
+	loop	newcol
 	ret
 
 exit:
@@ -271,45 +269,49 @@ exit:
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-%define	getmax	ebp + 4
+;%define	getmax	ebp + 4
+;
+;segment .text
+;find_max:
+;	enter	0, 0
+;	call	clear_regs
+;
+;	mov	EDX, [getmax]
+;	push	EAX			;Placeholder containers
+;	push	EAX
+;	mov	BL, 0
+;	mov	CL, 10
+;
+;scan:
+;	xor	EAX, EAX
+;	mov	AL, [EDX]		;Load character
+;	inc	EDX		
+;	cmp	AL, BL			;Compare to current maximum
+;;	jg	newmax			;If greater than the greatest...
+;	loop	scan			;Loop
+;	jmp	done
+;
+;newmax:
+;	pop	BL			;Get rid of old max
+;	pop	BL
+;	push	CL			;Store location
+;	push	AL			;Store value
+;	mov	BL, AL			;Save value for comparison
+;	jmp	newmax			; Return
+;
+;done:
+;	pop	EAX			;Get the values
+;	call	print_int
+;	pop	EAX
+;	xor	EDX, EDX		;Display them to users
+;	idiv	EAX, EDX
+;	call	print_int
+;
+;leave:
+;	call	print_nl
+;	leave
+;	ret
 
-segment .text
-find_max:
-	enter	0, 0
-	call	clear_regs
 
-	mov	EDX, [getmax]
-	push	EAX			;Placeholder containers
-	push	EAX
-	mov	BL, 0
-	mov	CL, 10
 
-scan:
-	xor	EAX, EAX
-	mov	AL, [EDX]		;Load character
-	inc	EDX		
-	cmp	AL, BL			;Compare to current maximum
-	jg	newmax			;If greater than the greatest...
-	loop	scan			;Loop
-	jmp	done
 
-newmax:
-	pop	BL			;
-	pop	BL
-	push	CL
-	push	AL
-	mov	BL, AL
-	jmp	loop
-
-done:
-	pop	EAX
-	call	print_int
-	pop	EAX
-	xor	EDX, EDX
-	idiv	EAX, EDX
-	call	print_int
-
-leave:
-	call	print_nl
-	leave
-	ret
