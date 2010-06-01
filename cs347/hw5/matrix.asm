@@ -30,16 +30,19 @@ segment .bss
 	trans	resb	102		;Space for new matrix
 
 segment .text
-        global  asm_main, clear_regs, transpose_matrix, find_max
+        global  asm_main, clear_regs, transpose_matrix, find_max, print_matrix
 
 asm_main:
         enter   0,0
         pusha
-	call	clear_regs		;Clean house before party
 
+
+	call	clear_regs		;Clean house before party
 	call	make_matrix
-	mov	EBX, input		;Print_matrix uses address
+	mov	EBX, input
+	push	EBX			;Print_matrix uses address
 	call	print_matrix		;in EBX as matrix to print
+	add	ESP, 4
 
 	mov	EAX, input		;Push address for user's matrix
 	push	EAX
@@ -47,10 +50,8 @@ asm_main:
 	push	EAX
 
 	call	transpose_matrix
-	add	ESP, 8			;Clean up the stack pointer
-
-	mov	EBX, trans
 	call	print_matrix		;Print result
+	add	ESP, 8			;Clean up the stack pointer
 
 	jmp	fin
 
@@ -109,41 +110,6 @@ print_coordinates:
 	XOR	EAX, EAX
 	ret
 
-;
-;print_matrix
-;
-;This function will print out the presumed matrix
-;loaded into the EBX register.
-;
-print_matrix:
-	mov	EDX, EBX		;Copy the EDX
-	mov	AL, 1
-	mov	[EBP - 4], AL
-	inc	EBX
-	mov	CL, 1
-	inc	EBX
-	call	print_matrix_loop
-	ret
-
-print_matrix_loop:
-	XOR	EAX, EAX
-	mov	AL, [EBX]
-	call	print_int
-	mov	EAX, ' '
-	call	print_char
-	inc	EBX
-	inc	CL
-	cmp	CL, [EDX + 1]
-	jle	print_matrix_loop
-	call	print_nl
-	mov	CL, 1
-	mov	AL, [EBP - 4]
-	inc	AL
-	mov	[EBP - 4], AL
-	cmp	AL, [EDX]
-	jle	print_matrix_loop
-	ret
-
 fin:
 	call	print_nl
         popa
@@ -151,6 +117,45 @@ fin:
 	leave
 	ret
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;print_matrix
+;
+;This function will print out the presumed matrix
+;loaded into the EBX register.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+segment .text
+print_matrix:
+	enter	4, 0
+
+	call	clear_regs
+	mov	EBX, [EBP + 8]		;Copy the EDX
+	mov	CL, [EBX]
+	inc	EBX
+	mov	AL, [EBX]
+	mov	[EBP - 4], AL
+	inc	EBX
+	mov	DL, 1
+
+print_matrix_loop:
+	XOR	EAX, EAX
+	mov	AL, [EBX]
+	inc	EBX
+	call	print_int
+	mov	EAX, ' '
+	call	print_char
+	inc	DL
+	cmp	DL, [EBP - 4]
+	jle	print_matrix_loop
+	call	print_nl
+	mov	DL, 1
+	loop	print_matrix_loop
+
+	leave
+	ret
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
@@ -193,44 +198,36 @@ clear_regs:
 %define	trans	ebp + 8
 %define	cols	ebp - 4
 %define	rows	ebp - 8
-%define	last	ebp - 12
 
 segment .text
 transpose_matrix:
-	enter	12, 0			;Make space for 2 counters
+	enter	8, 0			;Make space for 2 counters
 	call	clear_regs
 	call	print_nl
 
-	mov	EDX, [trans]		;Load address for new matrix
 	mov	EBX, [matrix]		;Load provided matrix
+	mov	EDX, [trans]		;Load address for new matrix
 
 	mov	AL, [EBX]
-	mov	[rows], AL		;Initialize row counter
-	mov	[trans], AL
 	call	print_int
 	call	print_nl
+	mov	[rows], AL		;Initialize row counter
+	mov	[trans], AL
 	inc	EBX
-	inc	EDX
-
 
 	mov	AL, [EBX]
 	mov	[cols], AL
-	imul	AX, [rows]
 	call	print_int
 	call	print_nl
-	add	EAX, [matrix]
-	mov	[last], AX
+
 	inc	EBX
-	inc	EDX
-	mov	[rows], byte 0
 
 newrow:
 	call	print_nl
 	mov	CL, [cols]
 	call	newcol
 	mov	EDX, [trans]
-	inc	EDX
-	inc	EDX
+	add	EDX, 2
 	add	EDX, [rows]
 	inc	byte [rows]
 	cmp	byte [rows], 3
