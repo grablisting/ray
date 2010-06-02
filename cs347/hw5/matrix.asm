@@ -307,33 +307,45 @@ exit:
 
 %define	mat	ebp + 12
 %define	max	ebp + 8
+%define irows	ebp - 4
+%define icols	ebp - 8
 
 segment .text
 findmax_matrix:
-	enter	4, 0
+	enter	12, 0
 	call	clear_regs
 	call	print_nl
 
 	mov	EBX, [mat]		;Load matrix
 	mov	ECX, [EBX]		;Load row counter
+	mov	[irows], ECX		;Easy reference
 	add	EBX, 4
 	mov	EAX, [EBX]
 	mov	[EBP - 4], EAX		;Load and save columns for exit condition
+	mov	[icols], EAX		;Easy reference
 	add	EBX, 4
 	mov	DL, 0			;Initialize column counter
 
-	mov	dword [max], -1		;Initialize maximum, coordinates to -1
-	mov	dword [max + 4], -1
-	mov	dword [max + 8], -1
+	mov	EAX, [max]
+	mov	dword [EAX], -1		;Initialize maximum, coordinates to -1
+	mov	dword [EAX + 4], -1
+	mov	dword [EAX + 8], -1
 
 scan_loop:
 	mov	EAX, [EBX]		;Get a value
-	cmp	EAX, [max]		;Compare it to current max
+	mov	ESI, [max]
+	cmp	EAX, [ESI]		;Compare it to current max
 	jle	skip_max		;If this <= max, then continue
 
-	mov	[max], EAX		;Else, save new max
-	mov	[max + 4], ECX		;Save y coordinate
-	mov	[max + 8], EDX		;Save x coordinate
+	mov	ESI, [max]
+	mov	[ESI], EAX		;Else, save new max
+	mov	EAX, [irows]
+	mov	[ESI + 4], EAX		;Save y coordinate
+	sub	[ESI + 4], ECX		;
+	mov	EAX, [icols]		;
+	mov	[ESI + 8], EAX		;Load total number of columns 
+	sub	[ESI + 8], EDX		;Subtract and save offset as x coordinate
+	sub	dword [ESI + 8], 1
 
 skip_max:
 	add	EBX, 4			;Increment by dword size
