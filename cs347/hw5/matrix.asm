@@ -21,13 +21,16 @@
 
 segment .data
 	NF		equ	0Ah
-	cbefore		db	"Coord [", 0
+	cbefore		db	"[", 0
 	cmid		db	"][", 0
 	cafter		db	"]", 0
 
 segment .bss
-	input	resb	102		;Make space for user input
-	trans	resb	102		;Space for new matrix
+	input	resd	102		;Make space for user input
+	trans	resd	102		;Space for new matrix
+	maxval	resd	1
+	max_x	resd	1
+	max_y	resd	1
 
 segment .text
         global  asm_main, clear_regs, transpose_matrix, find_max, print_matrix
@@ -50,8 +53,12 @@ asm_main:
 	push	EAX
 
 	call	transpose_matrix
-	call	print_matrix		;Print result
 	add	ESP, 8			;Clean up the stack pointer
+	mov	EAX, trans
+	push	EAX
+	call	print_matrix		;Print result
+	add	ESP, 4			;Clean up the stack pointer
+
 
 	jmp	fin
 
@@ -60,13 +67,13 @@ make_matrix:
 	mov	EBX, input		
 	XOR	EAX, EAX
 	call	read_int		;Get first character for rows
-	mov	[EBX], AL
-	inc	EBX
+	mov	[EBX], EAX
+	add	EBX, 4
 
 	XOR	EAX, EAX
 	call	read_int		;Get next character for columns
-	mov	[EBX], AL
-	inc	EBX
+	mov	[EBX], EAX
+	add	EBX, 4
 	mov	DL, 0			;Set row position to 1	
 
 	call	read_row		;Fill the table with everything else
@@ -81,11 +88,12 @@ read_row:
 	ret
 
 get_col:
+	xor	EAX, EAX
 	call	read_int		;Get an integer
-	mov	[EBX], AL		;Save it
-	inc	EBX
+	mov	[EBX], EAX		;Save it
+	add	EBX, 4
 	inc	CL
-	cmp	CL, [input + 1]		;Check exit condition
+	cmp	CL, [input + 4]		;Check exit condition
 	jl	get_col
 	ret
 
@@ -133,27 +141,29 @@ print_matrix:
 
 	call	clear_regs
 	mov	EBX, [EBP + 8]		;Copy the EDX
-	mov	CL, [EBX]
-	inc	EBX
-	mov	AL, [EBX]
-	mov	[EBP - 4], AL
-	inc	EBX
+	mov	ECX, [EBX]
+	add	EBX, 4
+	mov	EAX, [EBX]
+	mov	[EBP - 4], EAX
+	add	EBX, 4
 	mov	DL, 1
 
 print_matrix_loop:
 	XOR	EAX, EAX
-	mov	AL, [EBX]
-	inc	EBX
+	mov	EAX, [EBX]
+	add	EBX, 4
 	call	print_int
 	mov	EAX, ' '
 	call	print_char
 	inc	DL
 	cmp	DL, [EBP - 4]
 	jle	print_matrix_loop
+
 	call	print_nl
 	mov	DL, 1
 	loop	print_matrix_loop
 
+end:
 	leave
 	ret
 
@@ -198,50 +208,56 @@ clear_regs:
 %define	trans	ebp + 8
 %define	cols	ebp - 4
 %define	rows	ebp - 8
+%define	ctr	ebp - 12
 
 segment .text
 transpose_matrix:
-	enter	8, 0			;Make space for 2 counters
+	enter	12, 0			;Make space for 2 counters
 	call	clear_regs
 	call	print_nl
 
 	mov	EBX, [matrix]		;Load provided matrix
 	mov	EDX, [trans]		;Load address for new matrix
 
-	mov	AL, [EBX]
-	call	print_int
-	call	print_nl
-	mov	[rows], AL		;Initialize row counter
-	mov	[trans], AL
-	inc	EBX
+	mov	EAX, [EBX]
+	mov	[rows], EAX		;Initialize row counter
+	add	EBX, 4
 
-	mov	AL, [EBX]
-	mov	[cols], AL
-	call	print_int
-	call	print_nl
+	xor	EAX, EAX
+	mov	EAX, [EBX]
+	mov	[cols], EAX
+	add	EBX, 4
 
-	inc	EBX
+	mov	EAX, [cols]
+	mov	dword[EDX], EAX
+	add	EDX, 4
+
+	mov	EAX, [rows]
+	mov	dword[EDX], EAX
+
+	mov	dword[ctr], 0
 
 newrow:
-	call	print_nl
-	mov	CL, [cols]
-	call	newcol
 	mov	EDX, [trans]
-	add	EDX, 2
-	add	EDX, [rows]
-	inc	byte [rows]
-	cmp	byte [rows], 3
+	add	EDX, 8
+	mov	EAX, [ctr]
+	imul	EAX, 4
+	add	EDX, EAX
+	mov	ECX, [cols]
+	call	newcol
+	inc	dword [ctr]
+	mov	EAX, [rows]
+	cmp	[ctr], EAX
 	jl	newrow
 	jmp	exit
 
 newcol:
-	xor	EAX, EAX
-	mov	AL, [EBX]
-	inc	EBX
-	call	print_int
-	call	print_nl
-	mov	[EDX], AL
-	add	EDX, [cols]
+	mov	EAX, [EBX]
+	add	EBX, 4
+	mov	[EDX], EAX
+	mov	EAX, [rows]
+	imul	EAX, 4
+	add	EDX, EAX
 	loop	newcol
 	ret
 
@@ -266,49 +282,17 @@ exit:
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;%define	getmax	ebp + 4
-;
-;segment .text
-;find_max:
-;	enter	0, 0
-;	call	clear_regs
-;
-;	mov	EDX, [getmax]
-;	push	EAX			;Placeholder containers
-;	push	EAX
-;	mov	BL, 0
-;	mov	CL, 10
-;
-;scan:
-;	xor	EAX, EAX
-;	mov	AL, [EDX]		;Load character
-;	inc	EDX		
-;	cmp	AL, BL			;Compare to current maximum
-;;	jg	newmax			;If greater than the greatest...
-;	loop	scan			;Loop
-;	jmp	done
-;
-;newmax:
-;	pop	BL			;Get rid of old max
-;	pop	BL
-;	push	CL			;Store location
-;	push	AL			;Store value
-;	mov	BL, AL			;Save value for comparison
-;	jmp	newmax			; Return
-;
-;done:
-;	pop	EAX			;Get the values
-;	call	print_int
-;	pop	EAX
-;	xor	EDX, EDX		;Display them to users
-;	idiv	EAX, EDX
-;	call	print_int
-;
-;leave:
-;	call	print_nl
-;	leave
-;	ret
+%define	getmax	ebp + 4
 
+segment .text
+find_max:
+	enter	0, 0
+	call	clear_regs
+
+leave:
+	call	print_nl
+	leave
+	ret
 
 
 
