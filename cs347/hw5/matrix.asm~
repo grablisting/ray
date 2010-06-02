@@ -1,7 +1,7 @@
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ; file: matrix.asm
 ;
@@ -15,107 +15,135 @@
 ;
 ; May 26, 2010
 ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 %include "asm_io.inc"
 
 segment .data
 	NF		equ	0Ah
-	cbefore		db	"[", 0
-	cmid		db	"][", 0
-	cafter		db	"]", 0
+	c1		db	"[", 0
+	c2		db	"][", 0
+	c3		db	"]", 0
 
 segment .bss
 	input	resd	102		;Make space for user input
 	trans	resd	102		;Space for new matrix
-	maxval	resd	1
-	max_x	resd	1
-	max_y	resd	1
+	maxval	resd	3
 
 segment .text
-        global  asm_main, clear_regs, transpose_matrix, find_max, print_matrix
+        global  asm_main, clear_regs, transpose_matrix, findmax_matrix, print_matrix
 
 asm_main:
         enter   0,0
         pusha
 
-
 	call	clear_regs		;Clean house before party
-	call	make_matrix
-	mov	EBX, input
-	push	EBX			;Print_matrix uses address
-	call	print_matrix		;in EBX as matrix to print
-	add	ESP, 4
+	call	make_matrix		;Gather matrix from user
 
-	mov	EAX, input		;Push address for user's matrix
+	mov	EBX, input		;Load user matrix
+	push	EBX
+	call	print_matrix		;Print it
+	add	ESP, 4			;Clean up
+
+	mov	EAX, input		;Load user matrix
 	push	EAX
-	mov	EAX, trans		;Push address for new matrix
+	mov	EAX, trans		;Load area for new matrix
 	push	EAX
 
-	call	transpose_matrix
-	add	ESP, 8			;Clean up the stack pointer
-	mov	EAX, trans
-	push	EAX
-	call	print_matrix		;Print result
-	add	ESP, 4			;Clean up the stack pointer
+	call	transpose_matrix	;Transpose 
+	add	ESP, 8			;Clean up
 
+	mov	EAX, trans		;Load transposed matrix
+	push	EAX
+	call	print_matrix		;Print it
+	add	ESP, 4			;Clean up
+
+	mov	EAX, input		;Load user matrix
+	push	EAX
+	mov	EAX, maxval		;Load area for max value
+	push	EAX
+
+	call	findmax_matrix		;Find the maximum value
+	add	ESP, 8			;Clean up
+
+	mov	EAX, maxval		;Load max value
+	push	EAX			
+	call	print_coord		;Print it nicely
+	add	ESP, 4			;Clean up
 
 	jmp	fin
 
 make_matrix:
-	call	print_nl
-	mov	EBX, input		
-	XOR	EAX, EAX
-	call	read_int		;Get first character for rows
+	mov	EBX, input		;Load area for users input matrix
+	call	read_int		;Get first character as number of rows
 	mov	[EBX], EAX
 	add	EBX, 4
 
-	XOR	EAX, EAX
-	call	read_int		;Get next character for columns
+	call	read_int		;Get next character as number of columns
 	mov	[EBX], EAX
 	add	EBX, 4
-	mov	DL, 0			;Set row position to 1	
+	mov	DL, 0			;Initialize row counter to 0
 
 	call	read_row		;Fill the table with everything else
 	ret
 
 read_row:
-	mov	CL, 0			;Set column position to 1
+	mov	CL, 0			;Initialize column counter to 0
 	call	get_col			;Get next column
-	inc	DL			;Increment row position
+	inc	DL			;Point to next row
 	cmp	DL, [input]		;Check exit condition
 	jl	read_row
 	ret
 
 get_col:
-	xor	EAX, EAX
-	call	read_int		;Get an integer
-	mov	[EBX], EAX		;Save it
+	call	read_int		;Retrieve an integer
+	mov	[EBX], EAX		;Save it in the matrix
 	add	EBX, 4
-	inc	CL
+	inc	CL			;Point to next column
 	cmp	CL, [input + 4]		;Check exit condition
 	jl	get_col
 	ret
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-;print_coordinates
+;print_coord
 ;
-;This function prints out the matrix coordinates in a nice format.
+;This function prints out a value followed by it's matrix coordinates.
 ;
-print_coordinates:
-	mov	EAX, cbefore
+; Input: An address on the stack of the following values in order:
+;	1. Value from the array
+;	2. Row position
+;	3. Column position
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+print_coord:
+	enter	0, 0
+	call	clear_regs
+
+	mov	EBX, [EBP + 8]
+	mov	EAX, [EBX]		;Get the dereferenced value from stack
+	call	print_int		;Print it
+
+	mov	EAX, ' '		;Print aesthetic space
+	call	print_char
+
+	mov	EAX, c1			;Print lefthand bracket "["
 	call	print_string
-	XOR	EAX, EAX
-	mov	AL, DL
+
+	mov	EAX, [EBX + 4]		;Print row position
 	call	print_int
-	mov	EAX, cmid
+
+	mov	EAX, c2			;Print middle brackets "]["
 	call	print_string
-	XOR	EAX, EAX
-	mov	AL, CL
+
+	mov	EAX, [EBX + 8]		;Print column position
 	call	print_int
-	mov	EAX, cafter
+
+	mov	EAX, c3			;Print ending bracket "]"
 	call	print_string
-	XOR	EAX, EAX
+
+	call	print_nl
+	leave
 	ret
 
 fin:
@@ -127,57 +155,52 @@ fin:
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ;print_matrix
 ;
-;This function will print out the presumed matrix
-;loaded into the EBX register.
+; This function will print out a matrix to the user display.
 ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Input: A matrix location from the stack.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 segment .text
 print_matrix:
-	enter	4, 0
-
+	enter	4, 0			;Space for column counter
 	call	clear_regs
-	mov	EBX, [EBP + 8]		;Copy the EDX
-	mov	ECX, [EBX]
+
+	mov	EBX, [EBP + 8]		;Load matrix
+	mov	ECX, [EBX]		;Load first value as loop counter for rows
 	add	EBX, 4
-	mov	EAX, [EBX]
+	mov	EAX, [EBX]		;Load second value as exit condition for column loop
 	mov	[EBP - 4], EAX
-	add	EBX, 4
-	mov	DL, 1
+	add	EBX, 4			;Point to start of the array
+	mov	DL, 1			;Initialize column counter
 
 print_matrix_loop:
-	XOR	EAX, EAX
-	mov	EAX, [EBX]
+	mov	EAX, [EBX]		;Get a value
 	add	EBX, 4
-	call	print_int
-	mov	EAX, ' '
+	call	print_int		;Print it
+	mov	EAX, ' '		;Print a space
 	call	print_char
 	inc	DL
-	cmp	DL, [EBP - 4]
+	cmp	DL, [EBP - 4]		;Check exit condition
 	jle	print_matrix_loop
 
-	call	print_nl
+	call	print_nl		;New Line for start of a new row
 	mov	DL, 1
 	loop	print_matrix_loop
 
-end:
 	leave
 	ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-; Function: clear_regs
+; Procedure: clear_regs
 ; 
 ; Zeros out all registers.
 ;
-; Ray Peters
-;
-; May 28, 2010
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 segment .text
 clear_regs:
@@ -187,22 +210,19 @@ clear_regs:
 	XOR	EDX, EDX
 	ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ; Function: transpose_matrix
 ;
 ; This program transposes a matrix supposed on the stack.
 ;
-; Input: A pointer to a matrix, and space for a transposed
-; matrix from the stack
+; Input: Two addresses from the stack:
+;	1. Address to user matrix
+;	2. Address for destination of transposed matrix
 ;
-; Output: Builds transposed matrix at the location specified.
+; Output: Builds transposed matrix at location 2.
 ;
-; Ray Peters
-;
-; May 28, 2010
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 %define matrix	ebp + 12
 %define	trans	ebp + 8
@@ -214,50 +234,52 @@ segment .text
 transpose_matrix:
 	enter	12, 0			;Make space for 2 counters
 	call	clear_regs
-	call	print_nl
 
-	mov	EBX, [matrix]		;Load provided matrix
-	mov	EDX, [trans]		;Load address for new matrix
+	mov	EBX, [matrix]		;Load input matrix
+	mov	EDX, [trans]		;Load destination for transposed matrix
 
-	mov	EAX, [EBX]
-	mov	[rows], EAX		;Initialize row counter
+	mov	EAX, [EBX]		;Get number of rows
+	mov	[rows], EAX		;Save it
 	add	EBX, 4
 
-	xor	EAX, EAX
-	mov	EAX, [EBX]
-	mov	[cols], EAX
+	mov	EAX, [EBX]		;Get number of columns
+	mov	[cols], EAX		;Save it
 	add	EBX, 4
 
-	mov	EAX, [cols]
+	mov	EAX, [cols]		;Save columns as rows in output matrix
 	mov	dword[EDX], EAX
 	add	EDX, 4
 
-	mov	EAX, [rows]
+	mov	EAX, [rows]		;Save rows as columns in output matrix
 	mov	dword[EDX], EAX
 
-	mov	dword[ctr], 0
+	mov	dword[ctr], 0		;Initialize counter (for rows) to zero
 
 newrow:
-	mov	EDX, [trans]
-	add	EDX, 8
-	mov	EAX, [ctr]
-	imul	EAX, 4
-	add	EDX, EAX
-	mov	ECX, [cols]
+	mov	EDX, [trans]		;Load output matrix
+	add	EDX, 8			;Point to first coordinate [0][0]
+
+	mov	EAX, [ctr]		;Load row counter
+	imul	EAX, 4			;Multiply by 4 to offset dword difference
+	add	EDX, EAX		;Add offset to current row position
+
+	mov	ECX, [cols]		;Initialize column read loop
 	call	newcol
+
 	inc	dword [ctr]
-	mov	EAX, [rows]
+	mov	EAX, [rows]		;Check exit condition
 	cmp	[ctr], EAX
-	jl	newrow
+	jl	newrow			;If row counter < input rows, loop
 	jmp	exit
 
 newcol:
-	mov	EAX, [EBX]
+	mov	EAX, [EBX]		;Get a value from input matrix
 	add	EBX, 4
-	mov	[EDX], EAX
-	mov	EAX, [rows]
-	imul	EAX, 4
-	add	EDX, EAX
+	mov	[EDX], EAX		;Save it to output
+
+	mov	EAX, [rows]		;Load number of input rows
+	imul	EAX, 4			;Account for dword offset
+	add	EDX, EAX		;Add offset to output pointer
 	loop	newcol
 	ret
 
@@ -266,30 +288,61 @@ exit:
 	leave
 	ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-; Function: find_max
+; Function: findmax_matrix
 ;
 ; This function finds the maximum value of an array.
 ;
-; Input: A pointer from the stack.
+; Input: Two arguments from the stack:
+;	1. Input matrix
+;	2. A destination for:
+;		1. Max Value
+;		2. Row position
+;		3. Column position
 ;
-; Output: Displays the maximum element and it's indeces. 
+; Output: Saves max value data to the destination provided.
 ;
-; Ray Peters
-;
-; May 28, 2010
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-%define	getmax	ebp + 4
+%define	mat	ebp + 12
+%define	max	ebp + 8
 
 segment .text
-find_max:
-	enter	0, 0
+findmax_matrix:
+	enter	4, 0
 	call	clear_regs
+	call	print_nl
 
-leave:
+	mov	EBX, [mat]		;Load matrix
+	mov	ECX, [EBX]		;Load row counter
+	add	EBX, 4
+	mov	EAX, [EBX]
+	mov	[EBP - 4], EAX		;Load and save columns for exit condition
+	add	EBX, 4
+	mov	DL, 0			;Initialize column counter
+
+	;mov	dword [max], -1		;Initialize maximum, coordinates to -1
+	;mov	dword [max + 4], -1
+	;mov	dword [max + 8], -1
+
+scan_loop:
+	mov	EAX, [EBX]		;Get a value
+	cmp	EAX, [max]		;Compare it to current max
+	jle	skip_max		;If this <= max, then continue
+
+	mov	[max], EAX		;Else, save new max
+	mov	[max + 4], ECX		;Save y coordinate
+	mov	[max + 8], EDX		;Save x coordinate
+
+skip_max:
+	add	EBX, 4			;Increment by dword size
+	inc	DL
+	cmp	DL, [EBP - 4]		;Check if last column
+	je	scan_loop
+	mov	DL, 0			;Reset column counter
+	loop	scan_loop		;Continue until all rows are read
+
 	call	print_nl
 	leave
 	ret
