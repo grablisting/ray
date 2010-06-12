@@ -1,7 +1,6 @@
 project Assg4 is
 
-   for Object_Dir use "..\..\..\..\";
-   for Source_Files use ("BeautifulIO.adb", "BeautifulIO.ads", "binary_main.adb", "generic_binary_tree.adb", "generic_binary_tree.ads", "lists_generic.adb", "lists_generic.ads");
+   for Source_Files use ("binary_main.adb", "generic_binary_tree.adb", "generic_binary_tree.ads", "gen_ints.adb");
    for Main use ("binary_main.adb");
 
 end Assg4;

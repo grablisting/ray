@@ -2,8 +2,7 @@ generic
 
    type Item is private;
 
-   with procedure Visit (
-         I : in     Item);
+   with procedure Visit (I : in Item);
 
    with function Compare (
          I1,
@@ -24,10 +23,18 @@ package Generic_Binary_Tree is
          T : in out Tree;
          V : in     Item);
 
-   -- performs an InOrder traversal of a named
-   -- binary tree
-   procedure In_Order_Traverse (
-         T : in     Tree);
+   -- performs an InOrder traversal of a named binary tree
+   procedure In_Order_Traverse (T : in Tree);
+
+   function avgLengthToLeaves ( T : Tree ) return Float;
+   function difMaxMinLeaves ( T : Tree ) return Integer;
+   function minLeaf (
+          T     : Tree;
+                     Depth : Natural := 0 ) return Natural;
+
+   function maxLeaf (
+          T     : Tree;
+          Depth : Natural := 0 ) return Natural;
 
 private
 
