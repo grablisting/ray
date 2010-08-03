@@ -1,7 +1,0 @@
-project Assg4 is
-
-   for Source_Files use ("binary_main.adb", "generic_binary_tree.adb", "generic_binary_tree.ads", "gen_ints.adb");
-   for Main use ("binary_main.adb");
-
-end Assg4;
-

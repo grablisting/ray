@@ -1,7 +1,0 @@
-project Lab4 is
-
-   for Main use ("lab4.adb");
-   for Source_Files use ("lab4.adb");
-
-end Lab4;
-

@@ -1,7 +1,0 @@
-project Assg2 is
-
-   for Source_Files use ("assg2.adb", "lists_generic.ads", "lists_generic.adb", "Stacks_Generic.ads", "Stacks_Generic.adb");
-   for Main use ("assg2.adb");
-
-end Assg2;
-

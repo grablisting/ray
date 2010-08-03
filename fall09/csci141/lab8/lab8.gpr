@@ -1,7 +1,0 @@
-project Lab8 is
-
-   for Source_Files use ("lab8.adb");
-   for Main use ("lab8.adb");
-
-end Lab8;
-

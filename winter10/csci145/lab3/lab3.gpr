@@ -1,7 +1,0 @@
-project Lab3 is
-
-   for Main use ("lab3.adb");
-   for Source_Files use ("lab3.adb");
-
-end Lab3;
-

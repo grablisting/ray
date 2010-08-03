@@ -1,7 +1,0 @@
-project Lab5 is
-
-   for Source_Files use ("lab5.adb", "generic_quicksort.adb", "generic_quicksort.ads");
-   for Main use ("lab5.adb", "generic_quicksort.adb", "generic_quicksort.ads");
-
-end Lab5;
-

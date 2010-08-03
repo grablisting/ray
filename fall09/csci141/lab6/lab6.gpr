@@ -1,7 +1,0 @@
-project Lab6 is
-
-   for Source_Files use ("lab6.adb");
-   for Main use ("lab6.adb");
-
-end Lab6;
-

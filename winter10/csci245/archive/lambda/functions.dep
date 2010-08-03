@@ -1,2 +1,0 @@
-functions.o functions.dep : functions.cpp functions.h sexpr.h environment.h bignum.h \
-  symbol.h number.h cons.h

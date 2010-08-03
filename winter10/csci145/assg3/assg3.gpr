@@ -1,6 +1,0 @@
-project Assg3 is
-
-   for Main use ("assg3.adb");
-
-end Assg3;
-

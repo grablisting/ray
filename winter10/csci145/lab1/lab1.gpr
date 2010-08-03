@@ -1,7 +1,0 @@
-project Lab1 is
-
-   for Source_Files use ("lab1.adb");
-   for Main use ("lab1.adb");
-
-end Lab1;
-

@@ -1,1 +1,0 @@
-number.o number.dep : number.cpp number.h sexpr.h environment.h bignum.h
