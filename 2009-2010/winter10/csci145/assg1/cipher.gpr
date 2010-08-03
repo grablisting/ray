@@ -1,0 +1,7 @@
+project Cipher is
+
+   for Source_Files use ("cipher.adb");
+   for Main use ("cipher.adb");
+
+end Cipher;
+

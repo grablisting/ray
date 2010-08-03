@@ -1,0 +1,138 @@
+V "GNAT Lib v2009"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnvnnvnvvvnnnnnnnnnnnnnnnvnnvnnnnnnnnvnnnnvnvvnnnnnnnnnnnnnnnnnn
+
+U lab8%b		lab8.adb		d7f083d2 NE OO SU KU
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-calend.ads		20090519112250 19486c30
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-numeri.ads		20090519112318 1cf3e608
+D a-nudira.ads		20090519112318 56734efa
+D a-nudira.adb		20090519112318 bde16134
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiinio.ads		20090519112342 949a7272
+D a-unccon.ads		20090519112342 51e09df2
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D lab8.adb		20091202174842 7cb54a3a
+D system.ads		20090519112726 0e6ea6c5
+D s-arit64.ads		20090519112524 ded5f422
+D s-conca5.ads		20090519112534 e435dfcb
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-imgint.ads		20090519112548 f77d133c
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-valint.ads		20090519112654 d23209d2
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 18|1r6 1r19 2r6 25r31 72r7 76r16 78r16 81r10 162r5 165r9 168r9
+. 170r16 171r11 183r7
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[14|48] 18|1w23 76r20 165r13
+X 8 a-numeri.ads
+16K13*Numerics 32e17 18|2r10 25r35
+X 9 a-nudira.ads
+53k22*Discrete_Random 117e33 18|2w19 25r44
+66R9 Generator 18|33r20[25]
+68V13 Random{integer} 18|59r28[25] 61r27[25]
+70U14 Reset 18|155r16[25]
+X 13 a-textio.ads
+51K13*Text_IO 509e16 18|1w10 72r11 78r20 81r14 162r9 168r13 170r20 171r15
+. 183r11
+76I12*Field{integer}
+169U14*New_Line 18|72r19 81r22
+172U14*Skip_Line 18|171r23
+175V13*End_Of_Line{boolean} 18|170r28
+245U14*Put 18|78r28 162r17 168r21 183r19
+245s19 Item{string} 18|78r33
+X 14 a-tiinio.ads
+58U14*Get 18|165r29[6|18]
+68U14*Put 18|76r36[6|18]
+69i7 Item{integer} 18|76r41[6|18]
+70i7 Width{13|76I12} 18|76r69[6|18]
+X 18 lab8.adb
+4U11*Lab8 4b11 186l5 186t9
+8I11 GameNumber{natural} 9r30 13r63 23r27 23r41 25r60 40r36 47r26 49r11 90r26
+. 107r34 147r14
+9I12 UserGameNumber{8I11} 30r15
+12I11 BoardDimension{integer} 13r28 13r44 17r9 18r9 51r18 52r20 73r18 74r21
+. 93r18 94r21 110r17 111r19
+13A8 GameBoard(8I11)<integer><integer> 29r14
+16R8 BoardPoint 19e13 31r27 40r55 42r36 43r36 48r21 107r53 108r14 124r34
+. 146r35
+17i5 r{12I11} 113m21 127r13 127r20 134r17 134r24 134r38 134r45 149r27 150r19
+. 150r43 151r19
+18i5 c{12I11} 114m21 128r17 128r24 128r38 128r45 133r16 133r23 149r33 150r25
+. 150r49 151r25
+23i4 EMPTY_SPACE{8I11} 75r42 177r30
+25K11 RandomNumber[9|53] 33r7 59r15 61r14 155r3
+29a3 TheBoard{13A8} 53m12 75r21 76r49 95r16 112r14 149r15 150m7 150r31 151m7
+30i3 UserInput{9I12} 165m33 176r30
+31r3 UserPoint{16R8} 176m5 179r20 180r18
+31r14 SpacePoint{16R8} 177m5 179r31 180r29
+32i3 Shuffle{integer} 58r19
+33r3 G{9|66R9[25]} 59r35 61r34 155r22
+38U13 InitBoard 46b13 66l7 66t16 158r3
+39U13 DisplayBoard 70b13 83l7 83t19 159r3 181r7
+40V13 FindNumber{16R8} 40>27 60r18 62r19 107b13 119l7 119t17 176r19 177r19
+40i27 toFind{8I11} 107b25 112r35
+41V13 IsSolved{boolean} 89b13 103l7 103t15 161r13
+42V13 AreAdjacent{boolean} 42>27 42>31 124b12 142l7 142t18 179r8
+42r27 P1{16R8} 124b25 127r10 128r14 128r35 133r13 134r14 134r35
+42r31 P2{16R8} 124b29 127r17 128r21 128r42 133r20 134r21 134r42
+43U13 SwapPoints 43>27 43>31 64r10 146b14 152l7 152t17 180r7
+43r27 P1{16R8} 146b26 149r24 149r30 150r16 150r22
+43r31 P2{16R8} 146b30 150r40 150r46 151r16 151r22
+47i7 count{integer} 53r34 54m12 54r21
+48r7 Temp{16R8} 60m10 64r21
+48r13 Temp2{16R8} 62m10 64r27
+49i7 D{8I11} 59m10 60r29 61m10 62r30
+51i11 row{12I11} 53r21
+52i13 col{12I11} 53r26
+58i11 x{integer}
+73i11 row{12I11} 75r30 76r58
+74i14 col{12I11} 75r35 76r63
+90i7 check{integer} 95r37 96m16 96r25
+92l7 checker 101l16 101e23
+93i11 row{12I11} 95r25
+94i14 col{12I11} 95r30
+108r7 Temp{16R8} 113m16 114m16 118r14
+110i10 row{12I11} 112r23 113r26
+111i12 col{12I11} 112r28 114r26
+147i7 Temp{8I11} 149m7 151r31
+

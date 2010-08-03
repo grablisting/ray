@@ -1,0 +1,1 @@
+symbol.o symbol.dep : symbol.cpp symbol.h sexpr.h environment.h bignum.h

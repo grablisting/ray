@@ -1,0 +1,45 @@
+with Ada.Text_IO;
+with Ada.Integer_Text_IO;
+with Ada.Characters.Handling;
+
+PROCEDURE Cipher IS
+   SUBTYPE Uppercase IS Character RANGE 'A'..'Z';
+
+   MaxLength : CONSTANT Positive := 80;
+   SUBTYPE MaxRange IS Positive RANGE 1..MaxLength;
+   InData, OutData : Ada.Text_IO.File_Type;
+   Key, MessageFile : String(MaxRange) := (OTHERS => '#');
+   KeyLength, MessageFileLength : Integer;
+   NextCh : Character;
+   keycount : Integer := 1;
+
+BEGIN --Cipher
+   Cipher := BuildCipherMap;
+
+   Ada.Text_IO.Put (Item => "Please enter the name of the file to decipher: ");
+   Ada.Text_IO.Get_Line (Item => MessageFile, Last => MessageFileLength);
+
+   Ada.Text_IO.Put (Item => "Enter the cipher key: ");
+   Ada.Text_IO.Get_Line (Item => Key, Last => KeyLength);
+
+   Ada.Text_IO.Put (Item => "Opening ");
+   Ada.Text_IO.Put (Item => MessageFile(1..MessageFileLength));
+   Ada.Text_IO.Put (Item => " and deciphering with the keyword ");
+   Ada.Text_IO.Put (Item => Key(1..KeyLength));
+   Ada.Text_IO.Put (Item => ".");
+   Ada.Text_IO.New_Line;
+
+   Ada.Text_IO.Open (File => InData, Mode => Ada.Text_IO.In_File, Name => MessageFile(1..MessageFileLength));
+
+   WHILE NOT Ada.Text_IO.End_of_File (File => InData) LOOP
+      WHILE NOT Ada.Text_IO.End_of_Line (File => InData) LOOP
+         Ada.Text_IO.Get (File => InData, Item => NextCh);
+         IF Ada.Characters.Handling.Is_Letter(NextCh) THEN
+      END LOOP;
+      Ada.Text_IO.Skip_Line(File => InData);
+--      Ada.Text_IO.New_Line(File => OutData);
+   END LOOP;
+
+--   Ada.Text_IO.Close (File => OutData);
+   Ada.Text_IO.Close (File => InData);
+END Cipher;

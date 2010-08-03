@@ -1,0 +1,229 @@
+V "GNAT Lib v2009"
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnvnnvnnvvnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U beautifulio%b		beautifulio.adb		4489aad8 NE OO PK GE KU
+
+U beautifulio%s		beautifulio.ads		f312d875 BN EE NE OO PK GE KU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.long_long_float_text_io%s  a-llftio.ads	a-llftio.ali
+W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
+W lists_generic%s	lists_generic.adb	lists_generic.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-charac.ads		20090519112254 506ce725
+D a-chlat1.ads		20090519112254 e9ee6d0a
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-flteio.ads		20090519112310 3407344a
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-llftio.ads		20090519112314 8fa2a9b5
+D a-llitio.ads		20090519112314 a7e55a31
+D a-stream.ads		20090519112324 34aca5be
+D a-string.ads		20090519112326 87b4230b
+D a-strmap.ads		20090519112326 5253a637
+D a-strunb.ads		20090519112326 f0549c04
+D a-suteio.ads		20090519112332 d857a771
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiflio.ads		20090519112340 5d91823c
+D a-tiinio.ads		20090519112342 949a7272
+D a-tiunio.ads		20090519112342 d721fe49
+D a-unccon.ads		20090519112342 51e09df2
+D beautifulio.ads	20100525030208 ccc96b9e
+D beautifulio.adb	20100525030324 8840c146
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D lists_generic.ads	20100524125500 f9d8917a
+D system.ads		20090519112726 0e6ea6c5
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 23|1r6 2r5 3r6 4r6 5r6 6r6 7r6 8r6 18r24 20r20 24|15r7 33r10
+. 57r7 80r7 83r13 86r7 89r10 96r7 99r13 103r7 106r10 113r7 116r13 119r7 120r7
+. 123r10 129r7 132r13 135r7 138r10 144r7 147r13 150r7 153r10 175r13 176r13
+. 179r16 179r58 182r16 182r56 185r13 190r16 205r7 206r7 223r10 223r50 224r10
+. 231r12 232r10
+X 7 a-flteio.ads
+20K13*Float_Text_IO[19|48] 23|5w10 24|119r11
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[20|48] 23|6w10 24|86r11
+X 10 a-llftio.ads
+18K13*Long_Long_Float_Text_IO[19|48] 23|8w10
+X 11 a-llitio.ads
+18K13*Long_Long_Integer_Text_IO[20|48] 23|7w10 24|103r11
+X 13 a-string.ads
+16K13*Strings 35e16 23|3r10 18r28
+X 15 a-strunb.ads
+42K21*Unbounded 431e26 23|3w18 18r36
+45R9*Unbounded_String 398e14 23|19r29
+60V13*To_Unbounded_String{45R9} 24|10r18
+66V13*To_String{string} 24|5r18
+X 18 a-textio.ads
+51K13*Text_IO 509e16 23|1w10 2r9 4r10 20r24 24|15r11 33r14 57r11 80r11 83r17
+. 89r14 96r11 99r17 106r14 113r11 116r17 120r11 123r14 129r11 132r17 135r11
+. 138r14 144r11 147r17 150r11 153r14 175r17 176r17 179r20 179r62 182r20 182r60
+. 185r17 190r20 205r11 206r11 223r14 223r54 224r14 231r16 232r14
+54P9*File_Type(372R9) 23|20r32 24|13r26 18r41 25r41 30r60 37r50
+55n23*In_File{55E9} 24|179r70 182r68 223r62
+76I12*Field{integer}
+89U14*Create 24|179r28
+90p7 File{54P9} 24|179r36
+91e7 Mode{55E9} 24|179r50
+92s7 Name{string} 24|179r79
+95U14*Open 24|182r28 223r22
+96p7 File{54P9} 24|182r34 223r28
+97e7 Mode{55E9} 24|182r48 223r42
+98s7 Name{string} 24|182r77 223r71
+101U14*Close 24|185r25 224r22
+101p22 File{54P9} 24|185r32 224r29
+121V13*Standard_Output{54P9} 23|23r50 24r34 25r49 26r68 30r58 24|13r39 18r54
+. 25r54 30r73 37r63
+168U14*New_Line 24|15r19
+168p24 File{54P9} 24|15r29
+169U14*New_Line 24|89r22 106r22 123r22 138r22 153r22 190r28 232r22
+172U14*Skip_Line 24|206r19
+209U14*Get 24|205r19
+244U14*Put 24|33r22 57r19
+244p19 File{54P9} 24|33r27
+244s37 Item{string} 24|33r39
+245U14*Put 24|80r19 83r25 96r19 99r25 113r19 116r25 120r19 129r19 132r25
+. 135r19 144r19 147r25 150r19 175r25
+297X4*Name_Error 24|231r24
+X 19 a-tiflio.ads
+70U14*Put 24|119r25[7|20]
+72i7 Fore{18|76I12} 24|119r37[7|20]
+73i7 Aft{18|76I12} 24|119r48[7|20]
+74i7 Exp{18|76I12} 24|119r58[7|20]
+X 20 a-tiinio.ads
+68U14*Put 24|86r27[8|18] 103r37[11|18]
+70i7 Width{18|76I12} 24|86r39[8|18] 103r49[11|18]
+X 21 a-tiunio.ads
+25K21*Unbounded_IO 61e29 23|4w18 24|176r25
+57U14*Get_Line=59:42 24|176r38
+58r7 Item{15|45R9} 24|176r48
+X 23 beautifulio.ads
+13i4 LineLength{natural} 24|82r32 98r32 115r32 131r32 146r32
+14i4 MaxLineLength{natural} 24|39r32 46r21 48r28 66r21 68r28
+16k9*BeautifulIO 13z4 14z4 44l5 44e16 24|2b14 243l5 243t16
+18K12*Str=18:36 19r25 24|5r14 10r14
+19R12*BigString{15|45R9} 27r65 28r43 32r74 39r79 41r55 42r45 24|3r43 8r65
+. 142r74 169r79 171r18 219r55 237r45
+20P12*File{18|54P9} 23r42 24r26 25r41 26r60 30r50 24|170r14 220r14 238r14
+23U14*Spaces 23>22 23>37 24|25b14 28l8 28t14 43r10 46r13 54r7 56r7 58r7 63r10
+. 66r13
+23i22 num{natural} 24|25b21 27r22
+23p37 To{20P12} 24|25b36 27r27
+24U14*Clear 24>21 24|13b14 16l8 16t13 21r10 41r7 51r10 60r7 71r10 73r7 203r7
+24p21 To{20P12} 24|13b21 15r37
+25U14*Clear 25>21 25>36 24|18b14 23l8 23t13
+25i21 num{natural} 24|18b21 20r21
+25p36 To{20P12} 24|18b36 21r17
+26U14*myRepeat 26>24 26>38 26>55 24|27r7 30b14 35l8 35t16 44r10 48r13 50r10
+. 55r7 59r7 64r10 68r13 70r10
+26s24 Obj{string} 24|30b24 33r47
+26i38 Times{natural} 24|30b38 32r21
+26p55 To{20P12} 24|30b55 33r35
+27V13*BigStringify{19R12} 27>27 24|8b13 11l8 11t20 226r17
+27s27 That_Is_The_Question{string} 24|8b27 10r38
+28V13*Stringify{string} 28>24 24|3b13 6l8 6t17 150r24 179r87 180r85 182r85
+. 183r69 192r73 194r71
+28r24 Or_Not_To_String{19R12} 24|3b24 5r28
+30U14*PageBreak 30>25 30>43 24|37b14 74l8 74t17
+30s25 Message{string} 24|37b25 39r48 57r30
+30p43 Here{20P12} 24|37b43 41r14 43r21 44r28 46r36 48r51 50r27 51r17 54r26
+. 55r24 56r32 57r24 58r46 59r24 60r13 63r21 64r28 66r36 68r51 70r27 71r16
+. 73r13
+31U14*PrintString 31>27 31>48 31>63 31>79 24|127b14 140l8 140t19 180r16 183r16
+. 192r19 194r19 204r7 225r10 233r10
+31b27 ExtraLong{boolean} 24|127b27 130r10
+31s48 Name{string} 24|127b48 129r24 131r19
+31s63 Value{string} 24|127b63 135r24
+31i79 ExtraLineBreaks{natural} 24|127b79 137r19
+32U14*PrintBigString 32>30 32>51 32>66 32>85 24|142b14 156l8 156t22
+32b30 ExtraLong{boolean} 24|142b30 145r10
+32s51 Name{string} 24|142b51 144r24 146r19
+32r66 Value{19R12} 24|142b66 150r34
+32i85 ExtraLineBreaks{natural} 24|142b85 152r19
+33U14*PrintInt 33>24 33>45 33>60 33>77 24|78b14 92l8 92t16
+33b24 ExtraLong{boolean} 24|78b24 81r10
+33s45 Name{string} 24|78b45 80r24 82r19
+33i60 Value{integer} 24|78b60 86r32
+33i77 ExtraLineBreaks{natural} 24|78b77 88r19
+34U14*PrintLongInt 34>28 34>49 34>64 34>91 24|94b14 109l8 109t20
+34b28 ExtraLong{boolean} 24|94b28 97r10
+34s49 Name{string} 24|94b49 96r24 98r19
+34i64 Value{long_long_integer} 24|94b64 103r42
+34i91 ExtraLineBreaks{natural} 24|94b91 105r19
+35U14*PrintFloat 35>26 35>47 35>62 35>77 35>96 24|111b14 125l8 125t18
+35b26 ExtraLong{boolean} 24|111b26 114r10
+35s47 Name{string} 24|111b47 113r24 115r19
+35f62 Value{float} 24|111b62 119r30
+35s77 AfterVal{string} 24|111b77 120r24
+35i96 ExtraLineBreaks{natural} 24|111b96 122r19
+36V13*Percentage{float} 36>25 36>33 24|158b13 161l8 161t18
+36i25 Thing1{integer} 24|158b25 160r20
+36i33 Thing2{integer} 24|158b33 160r34
+37V13*BigPercentage{float} 37>28 37>56 24|163b13 166l8 166t21
+37i28 Thing1{long_long_integer} 24|163b28 165r36
+37i56 Thing2{integer} 24|163b56 165r60
+39V13*AskForValidFileName{19R12} 39>34 39>50 24|169b13 198l8 198t27 228r17
+. 234r17 240r14
+39s34 Title{string} 24|169b34 175r65 180r70
+39b50 OutputBool{boolean} 24|169b50 178r16 191r19
+40V13*Ask{boolean} 40>18 24|200b13 216l8 216t11 222r10
+40s18 Question{string} 24|200b18 204r26
+41V13*Include{19R12} 41>22 41>29 24|219b13 235l8 235t15
+41s22 Title{string} 24|219b22 222r29 228r37 234r37
+41s29 Location{string} 24|219b29 222r48 223r79 225r63 226r30 233r61
+42V13*Request{19R12} 42>22 24|237b13 241l8 241t15
+42s22 Title{string} 24|237b22 240r34
+X 24 beautifulio.adb
+20i11 x{integer}
+32i11 x{integer}
+38i7 breaks{natural} 42r19 45r17 54r14 62r29 65r17
+39i7 TextWrapper{integer} 56r15 58r15 58r29
+42i11 x{integer} 43r18 45r13 48r44
+62i11 x{integer} 63r18 65r13 68r44
+82i14 x{integer}
+88i11 x{integer}
+98i14 x{integer}
+105i11 x{integer}
+115i14 x{integer}
+122i11 x{integer}
+131i14 x{integer}
+137i11 x{integer}
+146i14 x{integer}
+152i11 x{integer}
+170p7 temp{23|20P12} 179m44 182m42 185m40
+171r7 FileName{23|19R12} 176m56 179r97 180r95 182r95 183r79 187r20 192r84
+. 194r82
+201e7 Reply{character} 205m24 208r12
+220p7 temp{23|20P12} 223m36 224m37
+238p7 temp{23|20P12}
+X 27 lists_generic.ads
+3k9*Lists_Generic 23|9w6 27|28e18
+

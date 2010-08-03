@@ -1,0 +1,2 @@
+cons.o cons.dep : cons.cpp cons.h sexpr.h environment.h bignum.h functions.h \
+  number.h symbol.h closure.h

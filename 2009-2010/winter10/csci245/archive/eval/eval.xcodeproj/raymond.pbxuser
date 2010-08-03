@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4DE3849110FE29900028DE71 /* eval */;
+		activeTarget = 8DD76FA90486AB0100D96B5E /* eval */;
+		addToTargets = (
+			8DD76FA90486AB0100D96B5E /* eval */,
+		);
+		breakpoints = (
+			4DB066E41101531F00ED72C4 /* bignum_sundaysave.cpp:62 */,
+			4D71BC5D1106B6F300B68322 /* bignum-new2.cpp:116 */,
+			4D71BC5F1106B6F800B68322 /* bignum-new2.cpp:111 */,
+			4D71BC611106B6FC00B68322 /* bignum-new2.cpp:111 */,
+			4D71BC651106B7A400B68322 /* bignum-new2.cpp:116 */,
+			4D71BC671106B7A600B68322 /* bignum-new2.cpp:116 */,
+			4D71BC691106B7F000B68322 /* bignum-new2.cpp:129 */,
+			4D71BD4B1106E8DF00B68322 /* bignum.cpp:62 */,
+			4D71BD4D1106E8E100B68322 /* bignum.cpp:62 */,
+			4D71BD511106E8ED00B68322 /* bignum.cpp:62 */,
+			4D71BD531106E8EE00B68322 /* bignum.cpp:62 */,
+			4DC70FB61121E114002093E0 /* cons.cpp:181 */,
+		);
+		codeSenseManager = 4DE3849710FE299B0028DE71 /* Code sense */;
+		executables = (
+			4DE3849110FE29900028DE71 /* eval */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					881,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 288558337;
+			PBXWorkspaceStateSaveDate = 288558337;
+		};
+		perUserProjectItems = {
+			4D71BCC01106C67100B68322 /* PBXTextBookmark */ = 4D71BCC01106C67100B68322 /* PBXTextBookmark */;
+			4D7DDC00110E38770097C3BA /* PBXTextBookmark */ = 4D7DDC00110E38770097C3BA /* PBXTextBookmark */;
+			4DB984AF11330D5F00EFE5E8 /* PBXTextBookmark */ = 4DB984AF11330D5F00EFE5E8 /* PBXTextBookmark */;
+			4DC70FFC11223592002093E0 /* PBXTextBookmark */ = 4DC70FFC11223592002093E0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4DE3849610FE299B0028DE71 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* bignum_sundaysave.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = bignum_sundaysave.cpp;
+		path = /Users/raymond/Dropbox/notes/csci245/bignum/bignum/bignum_sundaysave.cpp;
+		sourceTree = "<absolute>";
+	};
+	4D20C3E41119F258000761BD /* sexpr.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 1400}}";
+			sepNavSelRange = "{1644, 0}";
+			sepNavVisRange = "{885, 759}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4D71BC5D1106B6F300B68322 /* bignum-new2.cpp:116 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 116;
+		modificationTime = 287436936.7365431;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BC5F1106B6F800B68322 /* bignum-new2.cpp:111 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 111;
+		modificationTime = 287436936.73649;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BC611106B6FC00B68322 /* bignum-new2.cpp:111 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 111;
+		modificationTime = 287436936.736444;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BC651106B7A400B68322 /* bignum-new2.cpp:116 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 116;
+		modificationTime = 287436936.7365611;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BC671106B7A600B68322 /* bignum-new2.cpp:116 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 116;
+		modificationTime = 287436936.736527;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BC691106B7F000B68322 /* bignum-new2.cpp:129 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DDD3603110411970010FBA5 /* bignum-new2.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 129;
+		modificationTime = 287436936.736473;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BCC01106C67100B68322 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4D71BCC11106C67100B68322 /* stl_vector.h */;
+		name = "stl_vector.h: 400";
+		rLen = 0;
+		rLoc = 14064;
+		rType = 0;
+		vrLen = 1415;
+		vrLoc = 13439;
+	};
+	4D71BCC11106C67100B68322 /* stl_vector.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stl_vector.h;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/bits/stl_vector.h";
+		sourceTree = "<absolute>";
+	};
+	4D71BD101106E01100B68322 /* bignum.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 2184}}";
+			sepNavSelRange = "{2438, 0}";
+			sepNavVisRange = "{1770, 668}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4D71BD4B1106E8DF00B68322 /* bignum.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4D71BD101106E01100B68322 /* bignum.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 62;
+		modificationTime = 287434593.229177;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BD4D1106E8E100B68322 /* bignum.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4D71BD101106E01100B68322 /* bignum.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		modificationTime = 287434591.194539;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BD511106E8ED00B68322 /* bignum.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4D71BD101106E01100B68322 /* bignum.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		modificationTime = 287434591.231484;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D71BD531106E8EE00B68322 /* bignum.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4D71BD101106E01100B68322 /* bignum.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		modificationTime = 287434591.258742;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4D7DDC00110E38770097C3BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DED540811078DA0009192E6 /* cipher.adb */;
+		name = "cipher.adb: 9";
+		rLen = 0;
+		rLoc = 286;
+		rType = 0;
+		vrLen = 1623;
+		vrLoc = 0;
+	};
+	4DB066E41101531F00ED72C4 /* bignum_sundaysave.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* bignum_sundaysave.cpp */;
+		functionName = "bignum_carry(bignum& c)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		modificationTime = 287436936.736509;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4DB984AF11330D5F00EFE5E8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DB984B011330D5F00EFE5E8 /* typeinfo */;
+		name = "typeinfo: 98";
+		rLen = 0;
+		rLoc = 3381;
+		rType = 0;
+		vrLen = 1664;
+		vrLoc = 2765;
+	};
+	4DB984B011330D5F00EFE5E8 /* typeinfo */ = {
+		isa = PBXFileReference;
+		name = typeinfo;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/typeinfo";
+		sourceTree = "<absolute>";
+	};
+	4DC70FB61121E114002093E0 /* cons.cpp:181 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4DE5DA5511191BCE004D89AD /* cons.cpp */;
+		functionName = "Cons::eval()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 181;
+		modificationTime = 287434591.315656;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	4DC70FFC11223592002093E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4DC70FFD11223592002093E0 /* typeinfo */;
+		name = "typeinfo: 98";
+		rLen = 0;
+		rLoc = 3381;
+		rType = 0;
+		vrLen = 1664;
+		vrLoc = 2765;
+	};
+	4DC70FFD11223592002093E0 /* typeinfo */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.h;
+		name = typeinfo;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/typeinfo";
+		sourceTree = "<absolute>";
+	};
+	4DDD3603110411970010FBA5 /* bignum-new2.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = "bignum-new2.cpp";
+		path = "/Users/raymond/Dropbox/notes/csci245/bignum/bignum/bignum-new2.cpp";
+		sourceTree = "<absolute>";
+	};
+	4DE3849110FE29900028DE71 /* eval */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = eval;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+			$fctrl = 1;
+			$fioff = 1;
+			$fiseg = 1;
+			$fooff = 1;
+			$fop = 1;
+			$foseg = 1;
+			$fstat = 1;
+			$ftag = 1;
+			$mxcsr = 1;
+			"a-bignum &-bignum_multiply" = 2;
+		};
+	};
+	4DE3849610FE299B0028DE71 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4DE3849710FE299B0028DE71 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4DE5DA471119189E004D89AD /* bignum.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 924}}";
+			sepNavSelRange = "{1419, 0}";
+			sepNavVisRange = "{390, 1029}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4DE5DA5511191BCE004D89AD /* cons.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {564, 3080}}";
+			sepNavSelRange = "{3011, 0}";
+			sepNavVisRange = "{3188, 109}";
+			sepNavWindowFrame = "{{520, 6}, {609, 772}}";
+		};
+	};
+	4DE5DA5611191BCE004D89AD /* cons.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {548, 1274}}";
+			sepNavSelRange = "{1645, 0}";
+			sepNavVisRange = "{894, 751}";
+			sepNavWindowFrame = "{{19, 1}, {609, 772}}";
+		};
+	};
+	4DE5DA5711191BCE004D89AD /* functions.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 1050}}";
+			sepNavSelRange = "{1024, 0}";
+			sepNavVisRange = "{403, 621}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4DE5DA5811191BCE004D89AD /* functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 664}}";
+			sepNavSelRange = "{711, 0}";
+			sepNavVisRange = "{0, 711}";
+			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
+		};
+	};
+	4DE5DA5911191BCE004D89AD /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 664}}";
+			sepNavSelRange = "{410, 0}";
+			sepNavVisRange = "{0, 427}";
+			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
+		};
+	};
+	4DE5DA5B11191BCE004D89AD /* number.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 798}}";
+			sepNavSelRange = "{224, 0}";
+			sepNavVisRange = "{0, 648}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4DE5DA5C11191BCE004D89AD /* number.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 1036}}";
+			sepNavSelRange = "{92, 0}";
+			sepNavVisRange = "{0, 840}";
+			sepNavWindowFrame = "{{19, 0}, {879, 778}}";
+		};
+	};
+	4DE5DA5D11191BCE004D89AD /* sexpr.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 664}}";
+			sepNavSelRange = "{657, 0}";
+			sepNavVisRange = "{0, 657}";
+			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
+		};
+	};
+	4DE5DA5E11191BCE004D89AD /* symbol.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1059, 536}}";
+			sepNavSelRange = "{70, 0}";
+			sepNavVisRange = "{0, 391}";
+			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
+		};
+	};
+	4DE5DA5F11191BCE004D89AD /* symbol.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 664}}";
+			sepNavSelRange = "{417, 0}";
+			sepNavVisRange = "{0, 417}";
+			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
+		};
+	};
+	4DED540811078DA0009192E6 /* cipher.adb */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.ada;
+		name = cipher.adb;
+		path = /Users/raymond/Dropbox/notes/csci145/Project1/cipher.adb;
+		sourceTree = "<absolute>";
+	};
+	8DD76FA90486AB0100D96B5E /* eval */ = {
+		activeExec = 0;
+		executables = (
+			4DE3849110FE29900028DE71 /* eval */,
+		);
+	};
+	C6A0FF2C0290799A04C91782 /* bignum.1 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {975, 1036}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1647}";
+		};
+	};
+}

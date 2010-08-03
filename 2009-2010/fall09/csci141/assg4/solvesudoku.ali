@@ -1,0 +1,149 @@
+V "GNAT Lib v2009"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnnnnnnnnvvnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U solvesudoku%b		solvesudoku.adb		0192e59b NE OO SU KU
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-charac.ads		20090519112254 506ce725
+D a-chahan.ads		20090519112252 dcb15e96
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiinio.ads		20090519112342 949a7272
+D a-unccon.ads		20090519112342 51e09df2
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D solvesudoku.adb	20091205030836 20153c1f
+D system.ads		20090519112726 0e6ea6c5
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 16|3r6 4r6 5r6 16r13 20r64 27r16 31r19 35r22 186r4 186r69 188r15
+. 195r7 196r7 197r7 198r7 199r7 200r7 201r7 202r7 203r7 207r10 210r16 212r16
+. 216r10 220r16 222r16 226r10 227r10 230r7 231r7 233r7 236r4
+X 2 a-charac.ads
+16K13*Characters 18e19 16|5r10 35r26
+X 3 a-chahan.ads
+39K24*Handling 147e28 16|5w21 35r37
+54V13*Is_Digit{boolean} 16|35r46
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[12|48] 16|4w10 199r11 212r20 222r20
+X 11 a-textio.ads
+51K13*Text_IO 509e16 16|3w10 16r17 20r68 27r20 31r23 186r8 186r73 188r19
+. 195r11 196r11 197r11 198r11 200r11 201r11 202r11 203r11 207r14 210r20 216r14
+. 220r20 226r14 227r14 230r11 231r11 233r11 236r8
+54P9*File_Type(372R9) 16|16r25 20r76
+55n23*In_File{55E9} 16|186r81
+76I12*Field{integer}
+95U14*Open 16|186r16
+96p7 File{54P9} 16|186r22
+97e7 Mode{55E9} 16|186r61
+98s7 Name{string} 16|186r38
+101U14*Close 16|236r16
+101p22 File{54P9} 16|236r22
+169U14*New_Line 16|195r19 197r19 201r19 203r19 227r22 231r19
+171U14*Skip_Line 16|31r31
+171p25 File{54P9} 16|31r41
+172U14*Skip_Line 16|233r19
+186V13*End_Of_File{boolean} 16|188r27
+186p26 File{54P9} 16|188r39
+208U14*Get 16|27r28
+208p19 File{54P9} 16|27r33
+208e37 Item{character} 16|27r49
+245U14*Put 16|196r19 198r19 200r19 202r19 207r22 210r28 216r22 220r28 226r22
+. 230r19
+245s19 Item{string} 16|196r24 198r24 200r24 202r24 207r27 210r33 216r27 220r33
+. 226r27 230r24
+X 12 a-tiinio.ads
+68U14*Put 16|199r27[7|18] 212r36[7|18] 222r36[7|18]
+69i7 Item{integer} 16|199r32[7|18] 212r41[7|18] 222r41[7|18]
+70i7 Width{11|76I12} 16|199r47[7|18] 212r69[7|18] 222r76[7|18]
+X 16 solvesudoku.adb
+7U11*SolveSudoku 7b11 237l5 237t16
+9A9 PotentialsArray(boolean)<integer> 10r45 11r53 47r33 48r27
+10A9 BoardArray(9A9)<integer><integer> 51r39
+11A9 PotentialsQuadrant(9A9)<integer><integer> 49r35
+12I12 CellDigit{natural} 13r47
+13A9 DisplayBoard(12I12)<integer><integer> 17r32 20r38 45r32 45r60 46r21
+16p4 Puzzle{11|54P9} 186m30 188r47 190r48 236m30
+17a4 ThisGame{13A9} 190m28 192r23 209r16 212r49
+17a14 ThisGame_Solved{13A9} 192m44 219r16 222r49
+20U14 Get_Game 20b14 20<24 20>52 43l8 43t16 190r7
+20a24 Display{13A9} 33m19 36m19 190r17
+20p52 Source{11|54P9} 27r41 31r49 190r38
+21e7 NextCh{character} 27m57 30r19 32r22 35r55 36r54
+22b7 Checker{boolean} 26r23 34m19 37m19 40m13
+24i11 row{integer} 33r27 36r27
+25i14 col{integer} 33r32 36r32
+45U14 Solver 45b14 45>22 45<46 182l8 182t14 192r7
+45a22 Item{13A9} 53r22 192r15
+45a46 Display{13A9} 73m10 180r31 192r33
+46a7 TempDisplay{13A9} 53m7 58r24 60r21 73r21 87r33 88r39 104r28 123r19 124r30
+. 128r28 137r28 157m25 163r28 165r42 170r28 172r42 180r17
+47a7 ThisCell{9A9} 59r13 63m22 67r37 105m28 108m34 111r54 146m16 149r22 156r25
+47a17 CellPossibles{9A9} 129m28 130m28 131r60 138m28 139m28 140r60 164m28
+. 165m28 166r61 171m28 172m28 173r61
+48a7 QuadrantPossibles{9A9} 49r79 83r19 89m28 93r43 100m19 107r38
+49a7 Quadrant{11A9} 77r32 93m19 100r40 117r41
+49a17 QuadrantChecker{11A9} 77m13 117r23
+50i7 Trigger{natural} 58m13 62r27 88m28 89r46 124m19 130r42 139r42
+50i16 Mark{natural} 147m16 150m22 150r30 154r19
+51a7 Whiteboard{10A9} 67m13 74r31 105r40 111m28 129r45 131m28 138r45 140m28
+. 146r28 164r45 166m28 171r45 173m28 180r63
+51a19 WhiteboardChecker{10A9} 74m10 180r43
+56i11 row{integer} 58r36 60r33 67r24
+57i14 col{integer} 58r41 60r38 67r29
+61i20 x{integer} 62r37 63r31
+81i17 QRow{integer} 85r36 85r52 93r28
+82i20 QCol{integer} 86r39 86r55 93r34
+85i23 Here{integer} 87r45 88r51
+86i26 This{integer} 87r51 88r57
+98i17 QRow{integer} 100r49 102r36 102r52
+99i20 QCol{integer} 100r55 103r39 103r55
+102i23 Here{integer} 104r40 105r51 111r39
+103i26 This{integer} 104r46 105r57 111r45
+106i32 Update{integer} 107r56 108r43
+120i14 row{integer} 123r31 124r42 127r30 137r40 138r56 140r39 146r39 157r37
+. 163r40 164r56 165r54 166r39 169r30 172r54
+121i17 col{integer} 123r36 124r47 128r53 129r69 131r52 136r30 146r44 157r42
+. 162r30 165r59 170r54 171r70 172r59 173r53
+125i23 RobustCheck{integer} 127r36 128r40 129r56 131r39 136r36 137r45 138r61
+. 140r44
+148i20 Here{integer} 149r31
+155i23 Here{integer} 156r34 157r50
+161i23 RobustUpdate{integer} 162r36 163r45 164r61 166r44 169r36 170r40 171r56
+. 173r39
+184i4 count{integer} 199r40 232m7 232r16
+206i11 row{integer} 209r25 212r58 219r32 222r65
+208i14 col{integer} 209r30 212r63
+218i14 col{integer} 219r37 222r70
+

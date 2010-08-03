@@ -1,0 +1,30 @@
+major themes: classes, pointers, memory
+
+STL: map, vector, iterator
+
+
+
+Classes: inheritence, overloading operators
+memory: stack, heap, (copy constructors, assignment operators, destructors [interaction between classes and memory])
+
+static variables have the same status as global variables
+
+copying in and out
+
+heap and stack; new and delete
+
+"find the errors" questions
+delete a;
+delete[] a;
+(differences between delete and delete[])
+
+When are destructors called?
+What is the difference between delete and delete[]?
+What is the difference between virtual and nonvirtual methods?
+What does inheritance mean?
+What is slicing?
+What is assigning?
+
+A lot of plus or minus pointer questions.
+Streams, recursion, sorting, searching... list queues stacks
+memory management

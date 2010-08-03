@@ -1,0 +1,7 @@
+keep in mind that the lines need to be centered using a certain number of spaces
+
+parameter: "choose the number of lines to post"
+
+
+
+

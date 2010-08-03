@@ -1,0 +1,8 @@
+project Lab7 is
+
+   for Source_Files use ("counting_sort.adb", "counting_sort.ads", "lab7.adb", "lab7-create.adb");
+   for Main use ("lab7.adb");
+   for Source_Dirs use (".");
+
+end Lab7;
+

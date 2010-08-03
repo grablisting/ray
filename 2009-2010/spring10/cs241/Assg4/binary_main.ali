@@ -1,0 +1,108 @@
+V "GNAT Lib v2009"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnvnnnvnnnnnnnnnnnnnvvnnnnnvnnnnnvnnnnnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U binary_main%b		binary_main.adb		5795e98b NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W generic_binary_tree%s	generic_binary_tree.adb	generic_binary_tree.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-flteio.ads		20090519112310 3407344a
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiflio.ads		20090519112340 5d91823c
+D a-tiinio.ads		20090519112342 949a7272
+D a-unccon.ads		20090519112342 51e09df2
+D binary_main.adb	20100612051812 30ac87e2
+D generic_binary_tree.ads  20100612044428 ae08dd31
+D generic_binary_tree.adb  20100612043554 eab3708d
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D system.ads		20090519112726 0e6ea6c5
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+X 1 ada.ads
+16K9*Ada 19e8 14|2r6 3r5 4r6 5r5 6r6 7r5 15r7 16r7
+X 5 a-flteio.ads
+20K13*Float_Text_IO[11|48] 14|6w10 7r9
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[12|48] 14|4w10 5r9 15r11
+X 10 a-textio.ads
+51K13*Text_IO 509e16 14|2w10 3r9 16r11
+54P9*File_Type(372R9) 14|27r26
+55n23*In_File{55E9} 14|39r29
+55n32*Out_File{55E9} 14|40r37 41r37
+89U14*Create 14|40r4 41r4
+90p7 File{54P9} 14|40r12 41r12
+91e7 Mode{55E9} 14|40r29 41r29
+92s7 Name{string} 14|40r47 41r47
+95U14*Open 14|39r4
+96p7 File{54P9} 14|39r10
+97e7 Mode{55E9} 14|39r21
+98s7 Name{string} 14|39r38
+101U14*Close 14|62r4 63r4 82r4
+101p22 File{54P9} 14|62r11 63r11 82r11
+104U14*Reset 14|68r4
+104p22 File{54P9} 14|68r11
+169U14*New_Line 14|16r19 77r12
+186V13*End_Of_File{boolean} 14|45r14 70r14
+186p26 File{54P9} 14|45r27 70r27
+X 12 a-tiinio.ads
+53U14*Get 14|46r7[6|18] 71r7[6|18]
+54p7 File{10|54P9} 14|46r12[6|18] 71r12[6|18]
+55i7 Item{integer} 14|46r23[6|18] 71r23[6|18]
+68U14*Put 14|15r27[6|18]
+69i7 Item{integer} 14|15r32[6|18]
+X 14 binary_main.adb
+11U11*Binary_Main 11b11 84l5 84t16
+13U14 My_Visit 13b14 13>24 17l8 17t16 23r21
+13i24 V{integer} 15r40
+19K12 Integer_Binary_Tree[15|12] 26r8 47r7 66r4 72r7 76r12
+26p4 T{15|14P9[19]} 47m40 66r48 72m40 76r56
+27p4 F{10|54P9} 39m18 45r35 46r20 68m19 70r35 71r20 82m19
+27p7 Output1{10|54P9} 40m20 62m19
+27p16 Output2{10|54P9} 41m20 63m19
+28i4 Value{integer} 46m31 47r48 71m31 72r48
+29i4 counter{natural}
+X 15 generic_binary_tree.ads
+3+9 Item 14|21r10
+5U19 Visit 14|23r10
+7V18 Compare{boolean} 14|22r10
+12k9*Generic_Binary_Tree 14|8w6 19r39 15|50e24
+14P9 Tree(41R9[14|19]) 14|26r28[19]
+17U14 Insert 14|47r27[19]
+18p10 T{14P9[14|19]} 14|47r35[19]
+19i10 V{integer} 14|47r43[19]
+22U14 Delete 14|72r27[19]
+23p10 T{14P9[14|19]} 14|72r35[19]
+24i10 V{integer} 14|72r43[19]
+27U14 In_Order_Traverse 14|66r24[19] 76r32[19]
+27p33 T{14P9[14|19]} 14|66r43[19] 76r51[19]
+41R9 Tree_Node
+

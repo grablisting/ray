@@ -1,0 +1,1 @@
+environment.o environment.dep : environment.cpp environment.h sexpr.h bignum.h
