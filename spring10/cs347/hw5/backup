@@ -1,0 +1,43 @@
+
+
+	mov	[EDX], CL		;Save column total as row total
+	inc	EDX
+	mov	[EDX], AL		;Save row total as column total
+	inc	EDX
+
+	xor	EAX, EAX
+	xor	ECX, ECX
+
+outer:
+	mov	EBX, [matrix]		;reset input pointer
+	inc	byte[cols]		;point to next column
+	add	EBX, [cols]		;Add offset to input pointer
+	mov	CL, 1			;Reset col counter
+
+trans_loop:
+	mov	AL, [EBX]		;Get a character
+	mov	[EDX], AL		;Save a character
+	inc	EDX
+	call	inc_origin
+	mov	EAX, [trans]
+	mov	AL, [EAX]
+	inc	CL			;Check to see if we've read enough
+	cmp	CL, AL			;characters for the current row
+	jle	trans_loop		;If false, continue reading
+
+	inc	byte[rows]		;Point to next row
+	mov	EAX, [trans]		;Load number of rows we need
+	mov	AL, [EAX]
+	cmp	[rows], AL		;Exit when we have the last row
+	jle	outer
+	jmp	exit
+
+inc_origin:
+	push	ECX			;Save state of ECX counter
+	xor	EAX, EAX
+	xor	ECX, ECX
+	mov	ECX, [trans]
+	mov	AL, [ECX]		;Offset the input pointer by the number
+	add	EBX, EAX		;of rows in the new array
+	pop	ECX			;Restore ECX
+	ret
