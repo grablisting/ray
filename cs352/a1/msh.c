@@ -60,10 +60,8 @@ int main (void) {
 void processline (char *line)
 {
 	pid_t	cpid;
-	int		status;
+	int	status;
 	char	**args = arg_parse(line);
-	
-	print_args((char *)"processline args array", args);
 
 	/* Start a new process to do the job. */
 	cpid = fork();
@@ -75,7 +73,6 @@ void processline (char *line)
 	/* Check for who we are! */
 	if (cpid == 0) {
 		/* We are the child! */
-		//execlp (line, line, (char *)0);
 		execvp(args[0], args);
 		
 		perror ("exec");
@@ -85,17 +82,15 @@ void processline (char *line)
 	/* Have the parent wait for child to complete */
 	if (wait (&status) < 0)
 		perror ("wait");
-	
-	free (args);
 }
 
 
 
 char ** arg_parse (char *line)
 {
-	int		i;
-	int		j;
-	int		tokens = 0;
+	int	i;
+	int	j;
+	int	tokens = 0;
 	char	*tokenPtr;
 	char	**args;
 	
@@ -130,16 +125,18 @@ char ** arg_parse (char *line)
 	/* Set last index to null */
 	args[i] = NULL;
 	
+	print_args("Parsed", args);
+	
 	return args;
 }
 
 void print_args (char *msg, char **args) {
-	int i = 0;
+	int i;
 	
 	printf("\n%s \n", msg);
 	
 	for (i = 0; args[i] != 0; i++)
-		printf("args[%i] = %s \n", i, args[i]);
+		printf("args[%i] = '%s' \n", i, args[i]);
 	
 	printf("\n\n");
 }
