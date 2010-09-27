@@ -7,6 +7,7 @@
 *
 */
 
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -29,16 +30,10 @@ char **arg_parse (char *line);
 
 int main (void) {
 
-	char	buffer [LINELEN];
-	int		len;
-
-	arg_parse(input);
-	char	*input[] = "  arg1       hokay   bestArgnum2  test4  zesty tacos  ";
-
-	return 0;
+	char buffer [LINELEN];
+	int len;
 
 	while (1) {
-
 		/* prompt and get line */
 		fprintf (stderr, "%% ");
 		if (fgets (buffer, LINELEN, stdin) != buffer)
@@ -51,7 +46,6 @@ int main (void) {
 
 		/* Run it ... */
 		processline (buffer);
-
 	}
 
 	if (!feof(stdin))
@@ -63,8 +57,9 @@ int main (void) {
 
 void processline (char *line)
 {
-	pid_t  cpid;
-	int    status;
+	pid_t	cpid;
+	int		status;
+	char	**args[] = arg_parse(line);
 
 	/* Start a new process to do the job. */
 	cpid = fork();
@@ -76,7 +71,9 @@ void processline (char *line)
 	/* Check for who we are! */
 	if (cpid == 0) {
 		/* We are the child! */
-		execlp (line, line, (char *)0);
+		//execlp (line, line, (char *)0);
+		execve ("/usr/home", args[], (char *)0);  ?????
+		
 		perror ("exec");
 		exit (127);
 	}
@@ -87,52 +84,51 @@ void processline (char *line)
 }
 
 
-char **arg_parse (char *line)
+
+char ** arg_parse (char *line)
 {
-	int counter;
-	char *ip;
-	/* char **args; */
+	int		i;
+	int		j;
+	int		tokens;
+	char	*tokenPtr;
+	char	**args;
+	
+	/* Skip over leading whitespace, and...
+		init line[0] to first char of the first arg */
+	line += strspn(line, " ");
+	
 
-	/* Skip leading whitespace */
-	ip = line;
+	tokens = 0;
+	/* Token count found by pairing whitespace and character substrings */
+	for (i = 0, j = strlen(line); i < j; tokens++) {
+		/* Skip successive characters */
+		i += strcspn(line+i, " ");
 
-	if (*ip
-		+ strspn(line, " ");
+		/* Convert first trailing space to null terminator, continue */
+		*(line + i) = 0;
+		i++;
 
-	printf("%s \n\n", ip);
-
-	while (ip ?: )
-	{
-		counter++;
-		ip = strchr(ip, ' ');
-		*ip = 0;
-		ip += strspn(ip, " ") + 1;
+		/* Skip successive whitespaces */
+		i += strspn(line+i, " ");
 	}
 
+	printf("%i \n\n", tokens);
 
-	printf("%s \n\n", ip);
-
-
-	/*
-
-	ip += strspn(ip, " ");
-	printf("\n\n-%c- \n\n", *ip);
-
-
-
-	args = (char **)malloc(sizeof(char *) * counter);
-
-
-	while (*ip != 0)
-	{
-
+	/* Allocate memory for tokens and one null terminator */
+	args = (char **) malloc(sizeof(char *) * (tokens + 1));
+	
+	/* Save pointers to be returned */
+	for (i = 0, tokenPtr = line; i <= tokens; i++) {
+		args[i] = tokenPtr;
+		tokenPtr += strcspn(tokenPtr, " ") + 1;
+		tokenPtr += strspn(tokenPtr, " ");
 	}
-	printf("%c", *(ip++));
-	args[i] = strchr(args[i-1], ' ');
-	args[i] += strspn(args[i], " ");
-	*/
 
+	/* Set last index to null */
+	args[i] = NULL;
+	
+	//for (i = 0; args[i] != 0; i++)
+	//	printf("%i %s \n", i, args[i]);
 
-	printf("\n\n");
-	return 0;
+	return args;
 }
