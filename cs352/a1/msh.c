@@ -25,7 +25,7 @@
 
 void processline (char *line);
 char **arg_parse (char *line);
-void print_args (char *msg, char **args);
+void print_args (char **args);
 
 
 /* Shell main */
@@ -57,14 +57,11 @@ int main (void) {
 }
 
 
-void processline (char *line)
-{
+void processline (char *line) {
 	pid_t	cpid;
 	int		status;
 	char	**args = arg_parse(line);
 	
-	print_args((char *)"processline args array", args);
-
 	/* Start a new process to do the job. */
 	cpid = fork();
 	if (cpid < 0) {
@@ -75,7 +72,6 @@ void processline (char *line)
 	/* Check for who we are! */
 	if (cpid == 0) {
 		/* We are the child! */
-		//execlp (line, line, (char *)0);
 		execvp(args[0], args);
 		
 		perror ("exec");
@@ -88,7 +84,6 @@ void processline (char *line)
 	
 	free (args);
 }
-
 
 
 char ** arg_parse (char *line)
@@ -118,28 +113,17 @@ char ** arg_parse (char *line)
 	}
 
 	/* Allocate memory for tokens and one null terminator */
-	args = (char **) malloc(sizeof(char *) * (tokens + 1));
+	args = (char **) malloc(sizeof(char *) * ++tokens);
 	
 	/* Save pointers to be returned */
-	for (i = 0, tokenPtr = line; i <= tokens; i++) {
+	for (i = 0, tokenPtr = line; i < tokens; i++) {
 		args[i] = tokenPtr;
 		tokenPtr += strcspn(tokenPtr, " ") + 1;
 		tokenPtr += strspn(tokenPtr, " ");
 	}
-
+	
 	/* Set last index to null */
-	args[i] = NULL;
+	args[i-1] = NULL;
 	
 	return args;
-}
-
-void print_args (char *msg, char **args) {
-	int i = 0;
-	
-	printf("\n%s \n", msg);
-	
-	for (i = 0; args[i] != 0; i++)
-		printf("args[%i] = %s \n", i, args[i]);
-	
-	printf("\n\n");
 }
