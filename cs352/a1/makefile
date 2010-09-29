@@ -1,8 +1,8 @@
 FILENAME=msh
-CFLAGS=-g -Wall -o
+CFLAGS=-g -Wall
 CC=gcc
 
 all:
 	rm -rf $(FILENAME)
-	$(CC) $(CFLAGS) $(FILENAME) $(FILENAME).c
+	$(CC) $(CFLAGS) -o $(FILENAME) $(FILENAME).c
 	./$(FILENAME)

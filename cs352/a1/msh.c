@@ -59,9 +59,9 @@ int main (void) {
 
 void processline (char *line) {
 	pid_t	cpid;
-	int		status;
+	int	status;
 	char	**args = arg_parse(line);
-	
+
 	/* Start a new process to do the job. */
 	cpid = fork();
 	if (cpid < 0) {
@@ -81,16 +81,14 @@ void processline (char *line) {
 	/* Have the parent wait for child to complete */
 	if (wait (&status) < 0)
 		perror ("wait");
-	
-	free (args);
 }
 
 
 char ** arg_parse (char *line)
 {
-	int		i;
-	int		j;
-	int		tokens = 0;
+	int	i;
+	int	j;
+	int	tokens = 0;
 	char	*tokenPtr;
 	char	**args;
 	
@@ -123,7 +121,9 @@ char ** arg_parse (char *line)
 	}
 	
 	/* Set last index to null */
+
 	args[i-1] = NULL;
 	
 	return args;
 }
+
